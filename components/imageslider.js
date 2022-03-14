@@ -94,7 +94,7 @@ export default function ImageSlider({imageSlider}){
                         <motion.div
                         initial={{ opacity: 0, x: 100 }}
                         whileInView={{ opacity: 1, x : 0 , transition: {
-                            delay: 0.3
+                            delay: 0.4
                         }}}
                         className='order-1 sm:order-1 md:order-2 md:pl-10 md:w-[40%]  md:text-left text-center md:mt-0 mt-10 font-[circularstd]  py-[40px]'>
                             <h4 className='text-24 text-[#141414] font-bold'>{imageSlider[imageIndex].feedback}</h4>
@@ -104,7 +104,7 @@ export default function ImageSlider({imageSlider}){
                         <motion.div
                         initial={{ opacity: 0, x: -100 }}
                         whileInView={{ opacity: 1, x : 0 , transition: {
-                            delay: 0.3
+                            delay: 0.4
                         }}}
                         className='sm:order-1 md:order-2 md:w-[60%] flex justify-center items-center md:mt-0 mt-5'>
                             <div className='relative md:w-[200px] w-[200px] h-[90px] md:h-[180px] md:translate-x-[80px] translate-x-[20px] '>
