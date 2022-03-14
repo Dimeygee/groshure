@@ -43,23 +43,23 @@ export default function MenuNav (){
 
 
     return (
-            <div class='overlay absolute top-0 bottom-0 right-0 left-0 h-[200vh] w-100p bg-[rgba(0,0,0,0.2)] z-50 '>
+            <div className='overlay absolute top-0 bottom-0 right-0 left-0 h-[200vh] w-100p bg-[rgba(0,0,0,0.2)] z-50 '>
                 <AnimatePresence>
                 <motion.div 
                         initial={{ opacity: 0, y:10 }}
                         animate={{ opacity: 1,y : 0 }}
                         exit={{ opacity: 0, y:10 }}
-                        class='bg-white w-[93%]  rounded-[25px] my-3 relative mx-auto'>
-                            <div class='flex px-5 py-3 items-center justify-between'>
-                                <div class=''>
+                        className='bg-white w-[93%]  rounded-[25px] my-3 relative mx-auto'>
+                            <div className='flex px-5 py-3 items-center justify-between'>
+                                <div className=''>
                                     <Image src={logo} alt="logo"  />
                                 </div>
-                                <div class='w-[40px] h-[40px] rounded-full flex justify-center items-center flex-col bg-[#F6F6F6]' onClick={handleClick}>
-                                    <div class='border-[1px] border-black w-[14px] rotate-45 '></div>
-                                    <div class='border-[1px] border-black w-[14px] -rotate-45 -translate-y-[2px] '></div>
+                                <div className='w-[40px] h-[40px] rounded-full flex justify-center items-center flex-col bg-[#F6F6F6]' onClick={handleClick}>
+                                    <div className='border-[1px] border-black w-[14px] rotate-45 '></div>
+                                    <div className='border-[1px] border-black w-[14px] -rotate-45 -translate-y-[2px] '></div>
                                 </div>
                             </div>
-                            <div class='text-center leading-[70px] font-[circularstd]'>
+                            <div className='text-center leading-[70px] font-[circularstd]'>
                                 <ul>
                                     <li>
                                         <Link href="/"><a onClick={toggleOverflow} style={route === "/" ? { fontSize: "26px", color:"#100C2A", fontWeight:700 } : { fontSize: "26px", color: "#676767", fontWeight:400 } }>Home</a></Link>
@@ -75,7 +75,7 @@ export default function MenuNav (){
                                     </li>
                                 </ul>
                             </div>
-                            <div class='pt-7 px-5 pb-[80px] '>
+                            <div className='pt-7 px-5 pb-[80px] '>
                                 <MobileButton paddingTop={'15px'} paddingBottom={'15px'} backgroundColor="#FD4C5C" color='white' width="100%" borderRadius="25px" fontSize="16px" fontWeight={700} >
                                     Join waitlist
                                 </MobileButton>
