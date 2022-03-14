@@ -3,7 +3,7 @@
 export default function Button ({ color, borderRadius,paddingLeft ,paddingRight,paddingTop, paddingBottom, children,backgroundColor, fontSize, position, height, flexGrow, display, width }) {
 
     return(
-        <button class='hidden md:block font-[circularstd] ' style={{
+        <button className='hidden md:block font-[circularstd] ' style={{
             borderRadius: borderRadius, 
             color : color,
             paddingLeft : paddingLeft, 

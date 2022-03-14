@@ -62,8 +62,8 @@ export default function ImageSlider({imageSlider}){
 
 
     return (
-      <div class='  min-h-[450px] oveflow-hidden'>
-        <div class='relative min-h-[780px]  md:min-h-[410px]'>
+      <div className='  min-h-[450px] oveflow-hidden'>
+        <div className='relative min-h-[780px]  md:min-h-[410px]'>
         <AnimatePresence initial={false} custom={direction}>
             <motion.div
               key={page}
@@ -90,30 +90,30 @@ export default function ImageSlider({imageSlider}){
               }}
             className='w-100p h-[100%] absolute'>
               
-              <div class='flex pt-6 md:flex-row flex-col '>
+              <div className='flex pt-6 md:flex-row flex-col '>
                         <motion.div
                         initial={{ opacity: 0, x: 100 }}
                         whileInView={{ opacity: 1, x : 0 , transition: {
                             delay: 0.3
                         }}}
-                        class='order-1 sm:order-1 md:order-2 md:pl-10 md:w-[40%]  md:text-left text-center md:mt-0 mt-10 font-[circularstd]  py-[40px]'>
-                            <h4 class='text-24 text-[#141414] font-bold'>{imageSlider[imageIndex].feedback}</h4>
-                            <small class='text-18 text-[#141414] mt-3 mb-4 inline-block'>{imageSlider[imageIndex].title}</small>
-                            <p class='text-24 text-[#616161]'>{imageSlider[imageIndex].para}</p>
+                        className='order-1 sm:order-1 md:order-2 md:pl-10 md:w-[40%]  md:text-left text-center md:mt-0 mt-10 font-[circularstd]  py-[40px]'>
+                            <h4 className='text-24 text-[#141414] font-bold'>{imageSlider[imageIndex].feedback}</h4>
+                            <small className='text-18 text-[#141414] mt-3 mb-4 inline-block'>{imageSlider[imageIndex].title}</small>
+                            <p className='text-24 text-[#616161]'>{imageSlider[imageIndex].para}</p>
                         </motion.div>
                         <motion.div
                         initial={{ opacity: 0, x: -100 }}
                         whileInView={{ opacity: 1, x : 0 , transition: {
                             delay: 0.3
                         }}}
-                        class='sm:order-1 md:order-2 md:w-[60%] flex justify-center items-center md:mt-0 mt-5'>
-                            <div class='relative md:w-[200px] w-[200px] h-[90px] md:h-[180px] md:translate-x-[80px] translate-x-[20px] '>
+                        className='sm:order-1 md:order-2 md:w-[60%] flex justify-center items-center md:mt-0 mt-5'>
+                            <div className='relative md:w-[200px] w-[200px] h-[90px] md:h-[180px] md:translate-x-[80px] translate-x-[20px] '>
                                 <Image src={ imageSlider[imageIndex].images[0] } alt="image" layout="fill"  />
                             </div>
-                            <div class='relative border-white border-[10px] md:border-x-[20px] md:w-[300px] md:h-[270px] w-[350px] h-[160px] z-10 rounded-full'>
+                            <div className='relative border-white border-[10px] md:border-x-[20px] md:w-[300px] md:h-[270px] w-[350px] h-[160px] z-10 rounded-full'>
                                 <Image src={ imageSlider[imageIndex].images[1] }  alt="image" layout="fill"  />
                             </div>
-                            <div class='relative  md:w-[200px] w-[200px] h-[90px] md:h-[180px] md:-translate-x-[80px] -translate-x-[20px]'>
+                            <div className='relative  md:w-[200px] w-[200px] h-[90px] md:h-[180px] md:-translate-x-[80px] -translate-x-[20px]'>
                                 <Image src={ imageSlider[imageIndex].images[2] }  alt="image" layout="fill"  />
                             </div>
                         </motion.div>
@@ -127,8 +127,8 @@ export default function ImageSlider({imageSlider}){
             {"‣"}
           </div>
         </div>
-        <div class='flex items-center justify-center'>
-              <div class=' w-[80px] flex justify-between items-center'>
+        <div className='flex items-center justify-center'>
+              <div className=' w-[80px] flex justify-between items-center'>
               <div style={ imageSlider[imageIndex].id == 1 ? { width: "18px", height: "18px" , border:"4px solid #FD4C5C", borderRadius: "50%", backgroundColor: "#fff",  } : { width: "13px", height: "13px",  borderRadius: "50%", backgroundColor: "#FD4C5C", opacity:0.5    } } onClick={() => skipToImage(0)}></div>
                   <div style={ imageSlider[imageIndex].id == 2 ? { width: "18px", height: "18px",  border:"4px solid #FD4C5C", borderRadius: "50%", backgroundColor: "#fff" } : { width: "13px", height: "13px",  borderRadius: "50%", backgroundColor: "#FD4C5C", opacity:0.5  } } onClick={() => skipToImage(1)}></div>
                   <div style={ imageSlider[imageIndex].id == 3 ? { width: "18px", height: "18px", border:"4px solid #FD4C5C", borderRadius: "50%", backgroundColor: "#fff" } : { width: "13px", height: "13px",  borderRadius: "50%", backgroundColor: "#FD4C5C" , opacity:0.5   } } onClick={() => skipToImage(2)}></div>  

@@ -43,21 +43,21 @@ const container = {
 export default function MobileHeader () {
 
     return(
-       <div class='md:hidden'>
+       <div className='md:hidden'>
          <motion.div 
             initial="hidden"
             animate="visible"
             variants={container}
-         className='mobileheader' >
+            className='mobileheader' >
            <motion.div 
            custom={1}
            variants={items}
-           class=' px-4 py-7   min-h-[50%]' >
-                <h1 class=' font-[Righteous] text-32 text-black leading-[40px]'>Grocery shopping at your <span className={styles.stroke}>fingertips</span></h1>
+           className=' px-4 py-7   min-h-[50%]' >
+                <h1 className=' font-[Righteous] text-32 text-black leading-[40px]'>Grocery shopping at your <span className={styles.stroke}>fingertips</span></h1>
                 <motion.div
                 custom={3}
                 variants={items}
-                class='text-base my-6'>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis vectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis</motion.div>
+                className='text-base my-6'>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis vectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis</motion.div>
                 <motion.div
                 custom={4}
                 variants={items}
@@ -70,7 +70,7 @@ export default function MobileHeader () {
             variants={itemImage}
             initial="hidden"
             whileInView="visible"
-            class=' relative  h-[300px] grow'>
+            className=' relative  h-[300px] grow'>
                 <Image src={mobilefruits} alt='mobilefruits' layout="fill" priority/>
             </motion.div>
         </motion.div>

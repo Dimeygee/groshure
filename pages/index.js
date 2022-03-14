@@ -95,89 +95,89 @@ export default function Home() {
           <meta name="twitter:url" content="" />
         </Head>
       <MobileHeader />
-      <header  class='hidden  min-h-[100vh] container mx-auto w-85 md:flex items-center md:min-h-[75vh] md:mt-0 mt-5 ' >
+      <header  className='hidden  min-h-[100vh] container mx-auto w-85 md:flex items-center md:min-h-[75vh] md:mt-0 mt-5 ' >
           <motion.div 
             initial="hidden"
             animate="visible"
             variants={container}
-            class='h-[450px]  w-[100%] relative overflow-hidden rounded-tr-[25px] mt-10'
+            className='h-[450px]  w-[100%] relative overflow-hidden rounded-tr-[25px] mt-10'
             >
-            <div class='z-10  md:absolute top-[44px] left-[44px] md:w-[598px] '>
+            <div className='z-10  md:absolute top-[44px] left-[44px] md:w-[598px] '>
               <motion.div
               custom={1}
               variants={items}
-              class='font-[Righteous] text-36 md:text-[60px] text-black leading-[70px]'>Grocery shopping at your <span className={styles.stroke}>fingertips</span></motion.div>
+              className='font-[Righteous] text-36 md:text-[60px] text-black leading-[70px]'>Grocery shopping at your <span className={styles.stroke}>fingertips</span></motion.div>
 
               <motion.div 
                        custom={2}
-                          variants={items} class='text-16 my-6 md:w-[570px]  font-[circularstd]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis vectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis
+                          variants={items} className='text-16 my-6 md:w-[570px]  font-[circularstd]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis vectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis
                   </motion.div>
              <motion.div  custom={3} variants={items}>
                 <WaitList width="526px" />
              </motion.div>
             </div>
-            <div  class='hidden md:block absolute w-100p h-100p '>
-              <div class='relative w-100p h-100p'>
+            <div  className='hidden md:block absolute w-100p h-100p '>
+              <div className='relative w-100p h-100p'>
                   <Image src={herocontainer} alt='herocontainer' layout="fill" priority/>
                 </div>
             </div>
-            <div class='w-[65%] relative h-[100%] left-[38%] hidden md:block '>            
+            <div className='w-[65%] relative h-[100%] left-[38%] hidden md:block '>            
               <motion.div 
               custom={4}
               variants={itemImage}
-              class='relative  h-100p'>
+              className='relative  h-100p'>
                   <Image  src={fruits} layout='fill' alt='fruits'  priority/>
               </motion.div>
             </div>
           </motion.div>
       </header>
-      <div class="container mx-auto  w-85 py-16 grid md:grid-cols-3 gap-20 md:gap-4 grid-cols-1">
+      <div className="container mx-auto  w-85 py-16 grid md:grid-cols-3 gap-20 md:gap-4 grid-cols-1">
               <motion.div initial={{ opacity: 0, y: 100}}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                class='flex items-center flex-col md:flex-row '>
-                <div class='mb-4 md:mb-0 '>
-                  <div class=' flex  p-[7px] rounded-full  justify-center shadow-bfs md:mr-4 mx-auto md:mx-0 '>
-                      <div class=' w-[50px] h-[50px] relative '>
+                className='flex items-center flex-col md:flex-row '>
+                <div className='mb-4 md:mb-0 '>
+                  <div className=' flex  p-[7px] rounded-full  justify-center shadow-bfs md:mr-4 mx-auto md:mx-0 '>
+                      <div className=' w-[50px] h-[50px] relative '>
                         <Image src={card} alt='changecolor'  priority layout="fill"/>
                       </div>
                     </div>
                 </div>
-             <div class="md:pr-6 text-center md:text-left   font-[circularstd]">
-                <h4 class='font-medium text-18 leading-5 mb-2' >Highlight title</h4>
-                <p class='text-sm text-[#718096] px-8 md:px-0 '>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus</p>
+             <div className="md:pr-6 text-center md:text-left   font-[circularstd]">
+                <h4 className='font-medium text-18 leading-5 mb-2' >Highlight title</h4>
+                <p className='text-sm text-[#718096] px-8 md:px-0 '>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus</p>
              </div>
           </motion.div>
           <motion.div
           initial={{ opacity: 0, y: 100}}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          class='flex items-center flex-col md:flex-row '>
-                <div class='mb-4 md:mb-0 '>
-                <div class=' flex  p-[7px] rounded-full  justify-center shadow-bfs md:mr-4 mx-auto md:mx-0 '>
-                      <div class=' w-[50px] h-[50px] relative '>
+          className='flex items-center flex-col md:flex-row '>
+                <div className='mb-4 md:mb-0 '>
+                <div className=' flex  p-[7px] rounded-full  justify-center shadow-bfs md:mr-4 mx-auto md:mx-0 '>
+                      <div className=' w-[50px] h-[50px] relative '>
                         <Image src={card} alt='changecolor'  priority layout="fill"/>
                       </div>
                     </div>
                 </div>
-             <div class="md:pr-6 text-center md:text-left   font-[circularstd]">
-                <h4 class='font-medium text-18 leading-5 mb-2' >Highlight title</h4>
-                <p class='text-sm text-[#718096] px-8 md:px-0 '>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus</p>
+             <div className="md:pr-6 text-center md:text-left   font-[circularstd]">
+                <h4 className='font-medium text-18 leading-5 mb-2' >Highlight title</h4>
+                <p className='text-sm text-[#718096] px-8 md:px-0 '>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus</p>
              </div>
           </motion.div>
           <motion.div
           initial={{ opacity: 0, y: 100}}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          class='flex items-center flex-col md:flex-row '>
-                <div class='mb-4 md:mb-0 '>
-                  <div class='flex w-62 h-62  rounded-full justify-center shadow-bfs md:mr-4 mx-auto md:mx-0 '>
+          className='flex items-center flex-col md:flex-row '>
+                <div className='mb-4 md:mb-0 '>
+                  <div className='flex w-62 h-62  rounded-full justify-center shadow-bfs md:mr-4 mx-auto md:mx-0 '>
                     <Image src={card} alt='changecolor'  priority/>
                   </div>
                 </div>
-             <div class="md:pr-6 text-center md:text-left   font-[circularstd]">
-                <h4 class='font-medium text-18 leading-5 mb-2' >Highlight title</h4>
-                <p class='text-sm text-[#718096] px-8 md:px-0 '>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus</p>
+             <div className="md:pr-6 text-center md:text-left   font-[circularstd]">
+                <h4 className='font-medium text-18 leading-5 mb-2' >Highlight title</h4>
+                <p className='text-sm text-[#718096] px-8 md:px-0 '>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus</p>
              </div>
           </motion.div>
         </div>

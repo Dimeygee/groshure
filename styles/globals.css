@@ -131,16 +131,28 @@ a {
   overflow:hidden;
 }
 
-#span4, #span2,#span3,#span5{
+
+#span2.lazy #span3.lazy,#span4.lazy,#span5.lazy {
+    background-image:unset ;   
+    background-color:lightgrey;              
+}
+
+#span4, #span5{
   grid-column:1/5;
   min-height:406px;
   border-radius:25px;
-  background-image:url("../public/desktopgreen.png");
+}
+
+#span4,#span2,#span3,#span5{
   background-repeat:no-repeat;
   background-size:cover;
   background-position:contain;
   z-index:5;
   display:flex;
+}
+
+#span4{
+  background-image:url("../public/desktopgreen.png");
 }
 
 #span5{
@@ -151,7 +163,6 @@ a {
   width:49.2%;
   min-height:660px;
   background-image:url("../public/desktopred.png");
-  display:flex;
   flex-direction:column;
 }
 
@@ -159,18 +170,8 @@ a {
   width:49.2%;
   min-height:660px;
   background-image:url("../public/desktopblack.png");
-  display:flex;
   flex-direction:column;
 }
-
-#span2.lazy #span3.lazy,#span4.lazy,#span5.lazy {
-    background-image:unset;   
-    background-color:lightgrey;              
-}
-
-
-
-
 
 
 @media screen and (max-width:524px){
