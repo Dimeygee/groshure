@@ -3,9 +3,9 @@ import Button from "./button"
 export default function WaitList({ width, boxShadow }) {
 
     return(
-        <div className={`md:w-[${width}] `} style={{
-            boxShadow: boxShadow}}>
-         {/* className='flex justify-between border-2 border-white bg-white p-1 min-h-[50px] rounded-full' */}
+        <div style={{
+            boxShadow: boxShadow,
+        }} className={`flex justify-between border-2 border-white bg-white p-1 min-h-[50px] rounded-full md:w-[${width}] `}>
               <form className='flex grow w-[100%] md:w-fit'>
                 <input style={{ border: "none" , outline: "none"}} className='grow md:text-18 text-sm w-[100%]
                  md:w-fit py-1 md:px-8 px-2 rounded-full' type='text' placeholder="Enter email address" />

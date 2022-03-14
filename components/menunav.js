@@ -51,7 +51,7 @@ export default function MenuNav (){
                         exit={{ opacity: 0, y:10 }}
                         className='bg-white w-[93%]  rounded-[25px] my-3 relative mx-auto'>
                             <div className='flex px-5 py-3 items-center justify-between'>
-                                <div className=''>
+                                <div>
                                     <Image src={logo} alt="logo"  />
                                 </div>
                                 <div className='w-[40px] h-[40px] rounded-full flex justify-center items-center flex-col bg-[#F6F6F6]' onClick={handleClick}>

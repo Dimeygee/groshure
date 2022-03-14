@@ -48,7 +48,7 @@ export default function MobileHeader () {
             initial="hidden"
             animate="visible"
             variants={container}
-         className='mobileheader' >
+            className='mobileheader' >
            <motion.div 
            custom={1}
            variants={items}

@@ -106,7 +106,7 @@ export default function Home() {
               <motion.div
               custom={1}
               variants={items}
-              className='font-[Righteous] text-36 md:text-[60px] text-black leading-[70px]'>Grocery shopping at your <span classNameName={styles.stroke}>fingertips</span></motion.div>
+              className='font-[Righteous] text-36 md:text-[60px] text-black leading-[70px]'>Grocery shopping at your <span className={styles.stroke}>fingertips</span></motion.div>
 
               <motion.div 
                        custom={2}

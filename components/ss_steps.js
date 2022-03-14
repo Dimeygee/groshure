@@ -17,7 +17,7 @@ export default function SS_steps (){
 
 
     return(
-        <div  className='h-100p min-h-1/4 grid gap-y-5 ss_step'>
+        <div className='ss_step h-100p min-h-1/4 grid gap-y-5'>
             <motion.div
             initial="hidden"
             whileInView="visible"

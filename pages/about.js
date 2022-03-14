@@ -94,7 +94,7 @@ export default function About () {
                 whileInView={{ opacity: 1, x : 0 , transition: {
                     delay: 0.5
                 }}}
-                className='mdtext-48 text-36 font-[Righteous]   md:w-[40%] md:pl-10 overflow-y-hidden'>
+                className='md:text-48 text-36 font-[Righteous]   md:w-[40%] md:pl-10 overflow-y-hidden'>
                     <p className='md:w-250 md:pb-12 pb-12 w-[150px] md:text-left text-center'>Who are <span className={styles.shopstroke}>We?</span></p>
                 </motion.div>
                 <motion.div 
@@ -118,48 +118,3 @@ export default function About () {
     )
 
 }
-/*
-
-<div className='testing border-black border-2 relative h-[400px]'>
-              
-                    <div className='absolute w-100p h-[100%] border-2 border-yellow-500'>
-                        <div className='flex pt-6 md:flex-row flex-col '>
-                            <motion.div
-                            initial={{ opacity: 0, x: 100 }}
-                            whileInView={{ opacity: 1, x : 0 , transition: {
-                                delay: 0.3
-                            }}}
-                            className='order-1 sm:order-1 md:order-2 md:pl-10 md:w-[40%]  md:text-left text-center md:mt-0 mt-10 font-[circularstd]  py-[40px]'>
-                                <h4 className='text-24 text-[#141414] font-bold'>feed management </h4>
-                                <small className='text-18 text-[#141414] mt-3 mb-4 inline-block'>position</small>
-                                <p className='text-24 text-[#616161]'>One of thee earliest activities we engaged in when we first got into astronomy is the same one we like to show our children just as soon as their excitement about the night sky begin</p>
-                            </motion.div>
-                            <motion.div
-                                    initial={{ opacity: 0, x: -100 }}
-                                    whileInView={{ opacity: 1, x : 0 , transition: {
-                                        delay: 0.3
-                                    }}}
-                                    className='sm:order-1 md:order-2 md:w-[60%] flex justify-center items-center md:mt-0 mt-5'>
-                                    <div className='relative md:w-[160px] w-[121px] h-[121px] md:h-[180px] md:translate-x-[70px] translate-x-[30px] '>
-                                        <Image src={ user2} alt="image" layout="fill"  />
-                                    </div>
-                                    <div className='relative border-white border-[10px] md:border-x-[20px] md:w-[290px] md:h-[280px] w-[180px] h-[180px] z-10 rounded-full'>
-                                        <Image src={ user1 }  alt="image" layout="fill"  />
-                                    </div>
-                                    <div className='relative  md:w-[160px] w-[121px] h-[121px] md:h-[180px] md:-translate-x-[70px] -translate-x-[30px]'>
-                                        <Image src={ user3 }  alt="image" layout="fill"  />
-                                    </div>
-                            </motion.div>
-                            <div className="next" onClick={() => paginate(1)}>
-                                {"‣"}
-                            </div>
-                            <div className="prev" onClick={() => paginate(-1)}>
-                                {"‣"}
-                            </div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-
-*/

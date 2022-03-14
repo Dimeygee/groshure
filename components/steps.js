@@ -5,10 +5,6 @@ import redcircle from "../public/redcircle.svg"
 import greencircle from "../public/greencircle.svg"
 import fpframe from "../public/fpframe.svg"
 import secpframe from "../public/secpframe.svg"
-import black from "../public/black.jpg"
-import yellow from "../public/yellow.png"
-import green from "../public/green.png"
-import red from "../public/red.jpg"
 import SS_steps from "./ss_steps"
 import MediaQuery from "react-responsive"
 import { motion } from "framer-motion"
@@ -67,13 +63,13 @@ export  default function Steps(){
                     <SS_steps />
                 </MediaQuery>
                 <MediaQuery minWidth={767}>
-                    <div  className='hidden md:block w-[450px] h-[450px]  absolute top-[120px] -left-[100px] d_hidden_steps'>
+                    <div className='d_hidden_steps hidden md:block w-[450px] h-[450px]  absolute top-[120px] -left-[100px]'>
                         <Image src={redcircle} alt="redcircle" layout="fill" />
                     </div>
-                    <div  className='hidden md:block w-[550px] h-[550px]  absolute top-[40%] -right-[100px] d_hidden_steps'>
+                    <div className='d_hidden_steps hidden md:block w-[550px] h-[550px]  absolute top-[40%] -right-[100px]'>
                         <Image src={yellowblack} alt="yellowblack" layout="fill" />
                     </div>
-                    <div  className='hidden md:block w-[450px] h-[450px]  absolute  -left-[100px] bottom-0 d_hidden_steps'>
+                    <div className='d_hidden_steps hidden md:block w-[450px] h-[450px]  absolute  -left-[100px] bottom-0'>
                         <Image src={greencircle} alt="greencircle" layout="fill" />
                     </div>
                     <div  className='py-16  px-20 grid gap-3  font-[circularstd]'>
@@ -147,7 +143,7 @@ export  default function Steps(){
                              <div className='w-[50%] h-[100%] '>
                                     <div className=' py-20 px-10'>
                                         <div className=' mb-3'>
-                                            <span className='rounded-full w-40 h-40  bg-white inline-block text-center font-black leading-[40px]'>1</span>
+                                            <span className='rounded-full w-40 h-40  bg-white inline-block text-center font-black leading-[40px]'>4</span>
                                         </div>
                                         <h2 className='text-white font-black leading-[40px] md:text-32 text-24'>Headliine title here</h2>
                                         <p className='text-base text-white leading-[25px] mt-3 '>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus am, purus sit amet luctus am, purus sit amet luctus</p>
