@@ -5,8 +5,9 @@ import shopphone from "../public/shopphone.jpg"
 import MediaQuery from "react-responsive"
 import MobileButton from "./mobilebutton"
 import { motion } from "framer-motion"
+import styles from "./stroke.module.css"
 
-export default function Comingsoon(){
+export default function ComingSoon(){
 
     const right={
         visible: i => ({ opacity: 1,y: 0,transition:{delay: i *  0.2,} }),
@@ -21,7 +22,7 @@ export default function Comingsoon(){
 
     return(
         <div className='min-h-1/5  md:flex items-center flex-row md:my-0 mt-[100px] md:mt-0 md:mb-0 mb-[150px] '>
-            <div className=' mx-auto  min-h-1/4 md:flex'>
+            <div className='mx-auto min-h-1/4 md:flex'>
                 <motion.div 
                     variants={left}
                     custom={1}
@@ -44,7 +45,7 @@ export default function Comingsoon(){
                             </div>
                         </div>
                         <div className=''>
-                            <h4 className='font-[Righteous] md:text-42 text-32'>Grocery shopping at your <span >fingertips</span></h4>
+                            <h4 className='font-[Righteous] md:text-42 text-32'>Grocery shopping at your <span className={styles.shopstroke}>fingertips</span></h4>
                             <p className='text-20 my-5  font-[circularstd]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis vectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis</p>
                         </div>
                         <WaitList width="100%" boxShadow="0px 9px 32px rgba(112, 160, 42, 0.15)" />

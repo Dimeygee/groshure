@@ -182,7 +182,7 @@ export default function Home() {
           <Features />
           <Steps />
           <Support />
-          <Comingsoon />
+          <ComingSoon />
           <Frequently />
         </main>
     </div>
