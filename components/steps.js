@@ -170,7 +170,7 @@ export  default function Steps(){
                                     if(entry.isIntersecting){
                                         var image = entry.target
 
-                                        image.classNameList.remove("lazy")
+                                        image.classList.remove("lazy")
 
                                         imageObserver.unobserve(image)
                                     }
