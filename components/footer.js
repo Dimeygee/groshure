@@ -1,10 +1,11 @@
-import WaitList from "./waitlist"
+
 import logo from "../public/logo.jpg"
 import Image from "next/image"
 import { useRouter } from "next/router"
-import MobileButton from "./mobilebutton"
 import MediaQuery from "react-responsive"
 import { motion } from "framer-motion"
+import WaitList from "./waitlist"
+import MobileButton from "./mobilebutton"
 
 const element ={
     hidden: { opacity: 0 ,y: 100 },
@@ -22,17 +23,17 @@ export default function Footer() {
                 <motion.div 
                     initial={{ y: 100 }}
                     whileInView={{ y: 0 }}
-                className='md:text-40 text-36 font-black '>Get <span className='text-groshure-red'>notified</span> when we launch 🚀</motion.div>
+                    className='md:text-40 text-36 font-black '>Get <span className='text-groshure-red'>notified</span> when we launch 🚀</motion.div>
                 <motion.div
                     initial={{ y: 100 }}
                     whileInView={{ y: 0 }}
-                className='text-18 md:w-[500px] mx-auto mt-3 mb-8 text-[#797B89]'>This is a big one and i consider it one of the most important 
+                    className='text-18 md:w-[500px] mx-auto mt-3 mb-8 text-[#797B89]'>This is a big one and i consider it one of the most important 
                     things for a designer to get right.</motion.div>
-                <motion.div 
+                    <motion.div 
                     initial={{ x: -100 }}
                     whileInView={{ x: 0 }}
-                className='mx-auto inline-block w-[100%] md:w-[50%]'>
-                    <WaitList  width="500px" boxShadow="0px 9px 32px rgba(112, 160, 42, 0.15)" />
+                    className='mx-auto inline-block w-[100%] md:w-[50%]'>
+                    <WaitList  width="100%" boxShadow="0px 9px 32px rgba(112, 160, 42, 0.15)" />
                 </motion.div>
                 <MediaQuery maxWidth={767}>
                     <div className='mt-5'>
@@ -47,7 +48,7 @@ export default function Footer() {
                     variants={element}
                     initial="hidden"
                     whileInView="visible"
-                className='w-90 mx-auto flex justify-between md:flex-row flex-col'>
+                    className='w-90 mx-auto flex justify-between md:flex-row flex-col'>
                     <div className='flex items-center md:flex-row flex-col'>
                         <div className='relative'>
                             <Image className='absolute' src={logo}  alt="logo" />

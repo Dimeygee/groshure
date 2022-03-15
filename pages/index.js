@@ -1,20 +1,18 @@
 import Image from "next/image"
 import herocontainer from "../public/herocontainer.jpg"
-import herogreen from "../public/herogreen.png"
 import fruits from "../public/fruits.svg"
-import styles from "../components/stroke.module.css"
 import card from "../public/card.png"
-import Features from "../components/features"
-import Steps from "../components/steps"
-import Comingsoon from "../components/commingsoon"
-import WaitList from "../components/waitlist"
-import Frequently from "../components/frequently"
-import Support from "../components/support"
-import MobileHeader from "../components/mobileheader"
-import MediaQuery from "react-responsive"
-import { useEffect  } from "react"
 import { motion } from "framer-motion"
 import Head from "next/head"
+import Features from "../components/features"
+import Steps from "../components/steps"
+import Frequently from "../components/frequently"
+import Support from "../components/support"
+import Comingsoon from "../components/commingsoon"
+import styles from "../components/stroke.module.css"
+import MobileHeader from "../components/mobileheader"
+import WaitList from "../components/waitlist"
+
 
 
 
@@ -60,7 +58,6 @@ export default function Home() {
     <div className='home_container ' >
       <Head>
           <link rel="icon" href="" />
-          <link href="" rel="canonical" />
           <meta name="" content="" />
           <meta
             name="apple-mobile-web-app-status-bar-style"
@@ -69,7 +66,7 @@ export default function Home() {
           <title>groshure 🚀 </title>
           <meta
             name="description"
-            content="I'm a self-taught Front End Developer and turning ideas into real life products is my calling."
+            content=""
           />
           <meta property="og:type" content="website" />
           <meta
@@ -94,7 +91,7 @@ export default function Home() {
           <meta name="twitter:card" content="" />
           <meta name="twitter:url" content="" />
         </Head>
-      <MobileHeader />
+        <MobileHeader />
       <header  className='hidden  min-h-[100vh] container mx-auto w-85 md:flex items-center md:min-h-[75vh] md:mt-0 mt-5 ' >
           <motion.div 
             initial="hidden"
@@ -106,12 +103,12 @@ export default function Home() {
               <motion.div
               custom={1}
               variants={items}
-              className='font-[Righteous] text-36 md:text-[60px] text-black leading-[70px]'>Grocery shopping at your <span className={styles.stroke}>fingertips</span></motion.div>
+              className='font-[Righteous] text-36 md:text-[60px] text-black leading-[70px]'>Grocery shopping at your <span  className={styles.stroke}>fingertips</span></motion.div>
 
               <motion.div 
                        custom={2}
                           variants={items} className='text-16 my-6 md:w-[570px]  font-[circularstd]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis vectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis
-                  </motion.div>
+              </motion.div>
              <motion.div  custom={3} variants={items}>
                 <WaitList width="526px" />
              </motion.div>

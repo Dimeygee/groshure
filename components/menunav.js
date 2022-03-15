@@ -4,7 +4,6 @@ import logo from "../public/logo.jpg"
 import Image from "next/image"
 import Link from "next/link"
 import { useRouter } from 'next/router'
-import MobileButton from "./mobilebutton"
 import { AnimatePresence, motion } from "framer-motion"
 
 
@@ -76,9 +75,6 @@ export default function MenuNav (){
                                 </ul>
                             </div>
                             <div className='pt-7 px-5 pb-[80px] '>
-                                <MobileButton paddingTop={'15px'} paddingBottom={'15px'} backgroundColor="#FD4C5C" color='white' width="100%" borderRadius="25px" fontSize="16px" fontWeight={700} >
-                                    Join waitlist
-                                </MobileButton>
                             </div>
                         </motion.div>
                 </AnimatePresence>

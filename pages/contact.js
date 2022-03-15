@@ -1,5 +1,4 @@
-import ACcontainer from "../components/accontainer"
-import ACmainContainer from "../components/accmaincontainer"
+
 import Link from "next/link"
 import Image from "next/image"
 import linepath from "../public/linepath.svg"
@@ -7,10 +6,11 @@ import linepath1x from "../public/linepath1x.svg"
 import location from "../public/location.svg"
 import message from "../public/message.svg"
 import phone from "../public/phone.svg"
-import Button from "../components/button"
 import MediaQuery from "react-responsive"
 import { motion } from "framer-motion"
 import Head from "next/head"
+import ACcontainer from "../components/accontainer"
+import ACmainContainer from "../components/accmaincontainer"
 
 const element = {
     hidden: { opacity: 0, y : 100 },
@@ -35,7 +35,6 @@ export default function Contact(){
         <div className='w-85  mt-7 mx-auto overflow-x-clip'>
             <Head>
           <link rel="icon" href="" />
-          <link href="" rel="canonical" />
           <meta name="" content="" />
           <meta
             name="apple-mobile-web-app-status-bar-style"
@@ -44,7 +43,7 @@ export default function Contact(){
           <title>groshure 🚀 </title>
           <meta
             name="description"
-            content="I'm a self-taught Front End Developer and turning ideas into real life products is my calling."
+            content=""
           />
           <meta property="og:type" content="website" />
           <meta
@@ -69,8 +68,8 @@ export default function Contact(){
           <meta name="twitter:card" content="" />
           <meta name="twitter:url" content="" />
         </Head>
-            <ACcontainer>
-                <motion.div
+            <ACcontainer >
+            <motion.div
                 initial="hidden"
                 animate='visible'
                 variants={element} 
@@ -88,14 +87,14 @@ export default function Contact(){
                     <Link href='/'>
                         <a >Home</a>
                     </Link>
-                    <span> > </span>
-                    <Link href='/about'>
+                    <span> &gt; </span>
+                    <Link href='/contact'>
                         <a className='text-groshure-red underline'>Contact Us</a>
                     </Link>
                 </motion.div>
             </ACcontainer>
             <ACmainContainer>
-                <div className=' md:w-50 h-614 flex items-center flex-col w-100p font-[circularstd] '>
+            <div className=' md:w-50 h-614 flex items-center flex-col w-100p font-[circularstd] '>
                     <div className='h-387 w-387 relative '>
                         <MediaQuery maxWidth={767}>
                             <div className=' absolute  w-100p h-100p '>
@@ -200,7 +199,6 @@ export default function Contact(){
 
                                 </textarea>
                             </fieldset>
-                            <Button width='100%' paddingTop="14px" paddingBottom="14px" borderRadius="12px" fontSize="16px" backgroundColor="#FD4C5C" color='#fff' display="block" >Submit</Button>
                         </form>
                     </motion.div>
                 </div>

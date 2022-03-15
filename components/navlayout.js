@@ -1,12 +1,12 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import logo from "../public/logo.jpg"
-import Button from "./button"
 import { useRouter } from 'next/router'
 import MediaQuery from 'react-responsive'
 import { motion, useAnimation } from "framer-motion"
 import { useEffect, useContext } from 'react'
 import { MenuContext } from "./context" 
+import Button from "./button"
 
 
 
@@ -48,7 +48,7 @@ export default function NavLayout () {
 
 
     return(
-        <div className="container mx-auto w-85  flex justify-between items-center py-5 ">
+        <div class="container mx-auto w-85  flex justify-between items-center py-5 ">
             <motion.div 
               key={router.route}
               initial={{ opacity: 0 }}
@@ -58,8 +58,8 @@ export default function NavLayout () {
             >
               <Image src={logo}  alt="logo" priority/>
             </motion.div>
-          <div className='hidden md:block'>
-            <ul className='flex justify-between w-64 font-[circularstd]'>
+          <div class='hidden md:block'>
+            <ul class='flex justify-between w-64 font-[circularstd]'>
               <motion.li custom={1}  initial={{ opacity: 0, y:10 }} animate={controls} >
               <Link href="/">
                 <a  style={router.asPath === "/" ? { fontSize: "16px", color:"#100C2A", fontWeight:"bold" } : { fontSize: "14px", color: "#676767", fontWeight:"normal" } } >Home</a>
@@ -91,10 +91,10 @@ export default function NavLayout () {
             </Button>
           </motion.div>
           <MediaQuery maxWidth={767} >
-            <div className='w-[30px] min-h-[30px]  flex justify-center items-center flex-col' onClick={handleClick}>
-              <div className='w-[20px] h-[3px] bg-[#FD4C5C]'></div>
-              <div className='w-[20px] h-[3px] bg-[#FD4C5C] my-[3px]'></div>
-              <div className='w-[20px] h-[3px] bg-[#FD4C5C]'></div>
+            <div class='w-[30px] min-h-[30px]  flex justify-center items-center flex-col' onClick={handleClick}>
+              <div class='w-[20px] h-[3px] bg-[#FD4C5C]'></div>
+              <div class='w-[20px] h-[3px] bg-[#FD4C5C] my-[3px]'></div>
+              <div class='w-[20px] h-[3px] bg-[#FD4C5C]'></div>
             </div>
           </MediaQuery>
       </div>

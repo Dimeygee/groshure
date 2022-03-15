@@ -5,10 +5,10 @@ import redcircle from "../public/redcircle.svg"
 import greencircle from "../public/greencircle.svg"
 import fpframe from "../public/fpframe.svg"
 import secpframe from "../public/secpframe.svg"
-import SS_steps from "./ss_steps"
 import MediaQuery from "react-responsive"
 import { motion } from "framer-motion"
 import Script from "next/script"
+import SS_steps from "./ss_steps"
 
 const element1 = {
     visible: i => ({ 
@@ -72,7 +72,7 @@ export  default function Steps(){
                     <div className='d_hidden_steps hidden md:block w-[450px] h-[450px]  absolute  -left-[100px] bottom-0'>
                         <Image src={greencircle} alt="greencircle" layout="fill" />
                     </div>
-                    <div  className='py-16  px-20 grid gap-3  font-[circularstd]'>
+                    <div  class='py-16  px-20 grid gap-3  font-[circularstd]'>
                     <motion.div 
                     variants={element1}
                     custom={2}
@@ -84,8 +84,8 @@ export  default function Steps(){
                                         <div className=' mb-3'>
                                             <span className='rounded-full w-40 h-40  bg-white inline-block text-center font-black leading-[40px]'>1</span>
                                         </div>
-                                        <h2 className='text-white font-black leading-[40px] md:text-32 text-24'>Headliine title here</h2>
-                                        <p className='text-base text-white leading-[25px] mt-3 '>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus am, purus sit amet luctus am, purus sit amet luctus</p>
+                                        <h2 class='text-white font-black leading-[40px] md:text-32 text-24'>Headliine title here</h2>
+                                        <p class='text-base text-white leading-[25px] mt-3 '>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus am, purus sit amet luctus am, purus sit amet luctus</p>
                                     </div>
                             </div>
                             <div className='w-[50%] h-[100%] flex items-end justify-center'>
@@ -94,14 +94,14 @@ export  default function Steps(){
                                 </div>
                             </div>
                         </motion.div>
-                        <div className='col-span-4  flex justify-between'>
+                        <div class='col-span-4  flex justify-between'>
                         <motion.div
                         variants={element2}
                         custom={2}
                         initial="hidden"
                         whileInView="visible"
                         className='lazy' id="span2">
-                            <div className='h-[40%]'>
+                            <div >
                                 <div className='p-10'>
                                     <span className='rounded-full w-40 h-40  bg-white inline-block text-center font-black leading-[40px]'>2</span>
                                     <h2 className='text-white font-black leading-[40px] text-32 mt-5'>Headliine title here</h2>
@@ -120,7 +120,7 @@ export  default function Steps(){
                         initial="hidden"
                         whileInView="visible"
                         className='lazy' id="span3">
-                            <div className='h-[40%]'>
+                            <div >
                                 <div className='p-10'>
                                     <span className='rounded-full w-40 h-40  bg-white inline-block text-center font-black leading-[40px]'>3</span>
                                     <h2 className='text-white font-black leading-[40px] text-32 mt-5'>Headliine title here</h2>
@@ -143,10 +143,10 @@ export  default function Steps(){
                              <div className='w-[50%] h-[100%] '>
                                     <div className=' py-20 px-10'>
                                         <div className=' mb-3'>
-                                            <span className='rounded-full w-40 h-40  bg-white inline-block text-center font-black leading-[40px]'>4</span>
+                                            <span className='rounded-full w-40 h-40  bg-white inline-block text-center font-black leading-[40px]'>1</span>
                                         </div>
-                                        <h2 className='text-white font-black leading-[40px] md:text-32 text-24'>Headliine title here</h2>
-                                        <p className='text-base text-white leading-[25px] mt-3 '>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus am, purus sit amet luctus am, purus sit amet luctus</p>
+                                        <h2 class='text-white font-black leading-[40px] md:text-32 text-24'>Headliine title here</h2>
+                                        <p class='text-base text-white leading-[25px] mt-3 '>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus am, purus sit amet luctus am, purus sit amet luctus</p>
                                     </div>
                             </div>
                             <div className='w-[50%] h-[100%] flex items-end justify-center'>
@@ -158,7 +158,7 @@ export  default function Steps(){
                     </div>
                 </MediaQuery>
              </div>
-             <Script>
+             <Script id="lazyload">
                 {` 
                         var lazyloadimages 
                          

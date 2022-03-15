@@ -1,10 +1,8 @@
 import Image from "next/image"
 import styles from "./stroke.module.css"
-import WaitList from "./waitlist"
 import mobilefruits from "../public/mobilefruits.svg"
 import MobileButton  from "./mobilebutton"
 import { motion } from "framer-motion"
-import Head from "next/head"
 
 
 const container = {
@@ -52,19 +50,12 @@ export default function MobileHeader () {
            <motion.div 
            custom={1}
            variants={items}
-           className=' px-4 py-7   min-h-[50%]' >
-                <h1 className=' font-[Righteous] text-32 text-black leading-[40px]'>Grocery shopping at your <span className={styles.stroke}>fingertips</span></h1>
+           className='px-4 py-7 min-h-[50%]' >
+                <h1 className='font-[Righteous] text-32 text-black leading-[40px]'>Grocery shopping at your <span className={styles.stroke}>fingertips</span></h1>
                 <motion.div
                 custom={3}
                 variants={items}
                 className='text-base my-6'>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis vectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis</motion.div>
-                <motion.div
-                custom={4}
-                variants={items}
-                >
-                    <WaitList width="100%" fontSize="14px"  />
-                </motion.div>
-                <MobileButton width="75%" paddingBottom="13px" paddingTop="13px"  backgroundColor="#FD4C5C" color='white' borderRadius="25px" fontSize={"14px"} marginTop="27px" >Join waitlist</MobileButton>
             </motion.div>
             <motion.div
             variants={itemImage}

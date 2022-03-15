@@ -4,6 +4,7 @@ import { motion, AnimatePresence  } from "framer-motion"
 import ContextWrapper from '../components/context'
 
 
+
 function MyApp({ Component, pageProps, router }) {
 
   
@@ -28,3 +29,4 @@ function MyApp({ Component, pageProps, router }) {
 }
 
 export default MyApp
+

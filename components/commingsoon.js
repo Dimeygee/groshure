@@ -1,7 +1,6 @@
 import Image from "next/image"
 import two from "../public/two.svg"
 import WaitList from "./waitlist"
-import styles from "./stroke.module.css"
 import shopphone from "../public/shopphone.jpg"
 import MediaQuery from "react-responsive"
 import MobileButton from "./mobilebutton"
@@ -28,24 +27,24 @@ export default function Comingsoon(){
                     custom={1}
                     initial="hidden"
                     whileInView="visible"
-                className='md:w-[50%] md:h-[800px] h-[600px] relative'>
-                    <Image src={shopphone} alt='shopphone' layer='fill' className='absolute'  placeholder="blur"/>
+                    className='md:w-[50%] md:h-[800px] h-[600px] relative'>
+                    <Image src={shopphone} alt='shopphone' layer='fill' class='absolute'  placeholder="blur"/>
                 </motion.div>
                 <motion.div 
                    variants={right}
                    custom={3}
                    initial="hidden"
                    whileInView="visible"
-                className='md:w-[50%] flex justify-center flex-col md:pr-6 text-center md:text-left'>
+                   className='md:w-[50%] flex justify-center flex-col md:pr-6 text-center md:text-left'>
                     <div className=' md:w-[450px] md:px-0 px-8'>
                         <div className='relative  md:w-[300px] h-[50px] flex items-center text-center'>
                             <small className='absolute text-groshure-red font-medium text-20 leading-3 text-center w-[100%] block md:inline'>Coming soon</small>
-                            <div className='w-120 h-120 absolute -z-0 md:right-[40%] right-[30%] -top-10'>
-                                <Image src={two} alt="two" layer="fill" className='opacity-30' />
+                            <div class='w-120 h-120 absolute -z-0 md:right-[40%] right-[30%] -top-10'>
+                                <Image src={two} alt="two" layer="fill" class='opacity-30' />
                             </div>
                         </div>
                         <div className=''>
-                            <h4 className='font-[Righteous] md:text-42 text-32'>Grocery shopping at your <span className={styles.shopstroke}>fingertips</span></h4>
+                            <h4 className='font-[Righteous] md:text-42 text-32'>Grocery shopping at your <span >fingertips</span></h4>
                             <p className='text-20 my-5  font-[circularstd]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis vectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis</p>
                         </div>
                         <WaitList width="100%" boxShadow="0px 9px 32px rgba(112, 160, 42, 0.15)" />

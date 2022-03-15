@@ -164,6 +164,7 @@ a {
   min-height:660px;
   background-image:url("../public/desktopred.png");
   flex-direction:column;
+  border-radius:25px;
 }
 
 #span3{
@@ -171,17 +172,18 @@ a {
   min-height:660px;
   background-image:url("../public/desktopblack.png");
   flex-direction:column;
+  border-radius:25px;
 }
 
 
-@media screen and (max-width:524px){
+@media screen and (max-width:767px){
 
     .d_hidden_steps{
       display:none;
     }
 
     .ss_step{
-      display:block;
+      display:grid;
     }
 
   
@@ -195,7 +197,7 @@ a {
   }
 
   .ss_step{
-    display:block;
+    display:grid;
   }
 
 
