@@ -1,4 +1,3 @@
-
 import Link from "next/link"
 import Image from "next/image"
 import linepath from "../public/linepath.svg"
@@ -11,6 +10,9 @@ import { motion } from "framer-motion"
 import Head from "next/head"
 import ACcontainer from "../components/accontainer"
 import ACmainContainer from "../components/accmaincontainer"
+import Button from "../components/button"
+
+
 
 const element = {
     hidden: { opacity: 0, y : 100 },
@@ -199,6 +201,7 @@ export default function Contact(){
 
                                 </textarea>
                             </fieldset>
+                            <Button width='100%' paddingTop="14px" paddingBottom="14px" borderRadius="12px" fontSize="16px" backgroundColor="#FD4C5C" color='#fff' display="block" >Submit</Button>
                         </form>
                     </motion.div>
                 </div>
