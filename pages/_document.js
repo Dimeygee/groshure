@@ -6,10 +6,8 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
-        <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet" />
         <link rel="preload" href="../public/font/circularstd.ttf"  as="font" crossOrigin/>
+        <link rel="preload" href="../public/font/Righteous.ttf"  as="font" crossOrigin/>
         </Head>
         <body>
           <Main />
