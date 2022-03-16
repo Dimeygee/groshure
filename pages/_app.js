@@ -1,3 +1,4 @@
+import "@fontsource/righteous"; 
 import '../styles/globals.css'
 import Layout from '../components/layout'
 import { motion, AnimatePresence  } from "framer-motion"

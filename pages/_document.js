@@ -6,8 +6,7 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-        <link rel="preload" href="../public/font/circularstd.ttf"  as="font" crossOrigin/>
-        <link rel="preload" href="../public/font/Righteous.ttf"  as="font" crossOrigin/>
+          <link rel="preload" href="../public/font/circularstd.ttf"  as="font" crossorigin/>
         </Head>
         <body>
           <Main />
