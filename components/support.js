@@ -35,7 +35,7 @@ export default function Support() {
                     <motion.div
                         initial={{ opacity: 0, y: 70 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        class=' font-[circularstd] block xl:w-[500px]'>
+                        class=' font-[circularstd]'>
                             <div class='flex md:justify-start justify-center'>
                                 <div class=' flex  p-[10px] rounded-full  justify-center shadow-bfs md:mr-4 mx-auto md:mx-0 '>
                                     <div class=' w-[70px] h-[70px] relative '>
@@ -61,7 +61,7 @@ export default function Support() {
                         <motion.div
                          initial={{ opacity: 0, y: 70 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        class='font-[circularstd] xl:w-[500px]'>
+                        class='font-[circularstd] '>
                         <div class='flex md:justify-start justify-center'>
                                 <div class=' flex  p-[10px] rounded-full  justify-center shadow-bfs md:mr-4 mx-auto md:mx-0 '>
                                     <div class=' w-[70px] h-[70px] relative '>
@@ -87,7 +87,7 @@ export default function Support() {
                         <motion.div
                          initial={{ opacity: 0, y: 70 }}
                          whileInView={{ opacity: 1, y: 0 }}
-                        class='font-[circularstd] xl:w-[500px]'>
+                        class='font-[circularstd] '>
                             <div class='flex md:justify-start justify-center'>
                                 <div class=' flex  p-[10px] rounded-full  justify-center shadow-bfs md:mr-4 mx-auto md:mx-0 '>
                                     <div class=' w-[70px] h-[70px] relative '>

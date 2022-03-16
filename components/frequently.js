@@ -30,7 +30,7 @@ export default function Frequently(){
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1, transition:{ delay: .5 } }}
         className='min-h-1/5  mt-8 bg-[#FFFAEB] py-20 xl:min-h-1/2'>
-            <div className='w-85 mx-auto min-h-1/5 flex items-center'>
+            <div className='w-85 mx-auto min-h-1/5 flex items-center xl:min-h-1/2'>
                 <motion.div 
                 whileInView={{ scale:[0,1.1,1], transition:{
                     duration: 0.3
@@ -38,8 +38,8 @@ export default function Frequently(){
                 className='hidden md:block w-[426px] h-[426px]  relative'>
                     <Image src={frequently} alt='frequently' className='absolute ' layer="fill" />
                 </motion.div>
-                <div className=' min-h-1/5 md:w-[70%] md:flex justify-end'>
-                    <div className=' md:w-90 min-h-1/5'>
+                <div className=' min-h-1/5 md:w-[70%] md:flex justify-end xl:min-h-1/2'>
+                    <div className=' md:w-90 min-h-1/5 xl:min-h-1/2'>
                         <div className='relative h-[70px] md:text-left text-center'>
                             <div className='absolute -top-8  w-120 h-120 -z-0 opacity-30'>
                                 <Image src={two} layout='fill' alt='two' />
