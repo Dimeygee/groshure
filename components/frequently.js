@@ -29,7 +29,7 @@ export default function Frequently(){
         <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1, transition:{ delay: .5 } }}
-        className='min-h-1/5  mt-8 bg-[#FFFAEB] py-20'>
+        className='min-h-1/5  mt-8 bg-[#FFFAEB] py-20 xl:min-h-1/2'>
             <div className='w-85 mx-auto min-h-1/5 flex items-center'>
                 <motion.div 
                 whileInView={{ scale:[0,1.1,1], transition:{

@@ -42,7 +42,7 @@ export default function Features() {
     const scrollRef = useRef(null)
 
     return(
-        <div id='features' className='min-h-[105vh] relative ' ref={scrollRef}>
+        <div id='features' className='min-h-[105vh] relative xl:min-h-[35vh]' ref={scrollRef}>
             <div className='absolute  w-[200px] h-[200px] right-0 top-0 '  >
                 <motion.div
                 initial={{ x: 100 }}
@@ -64,7 +64,7 @@ export default function Features() {
                     <Image src={rectangle} alt='rectangle' layout="responsive"  />
                 </motion.div>
             </div>
-            <div className='container mx-auto my-auto min-h-1/5 w-85  py-[80px]'  >
+            <div className='container mx-auto my-auto min-h-1/5 w-85  py-[80px] xl:min-h-1/3'  >
                 <div className='flex justify-center relative h-[100px]' >
                     <div className='inline-block text-center absolute z-10' >
                         <motion.div

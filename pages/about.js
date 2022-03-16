@@ -103,7 +103,7 @@ export default function About () {
                       <p className='text-24 md:text-base md:text-left text-center'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu ullamcorper sit orci morbi a ut. Velit sagittis sem ut commodo, elit. Sem leo semper facilisis diam. Nulla netus at tellus pellentesque. Elementum lorem tortor tellus urna mauris quis suspendisse sit. Pellentesque odio varius congue curabitur nec, sit. Libero posuere duis volutpat at auctor velit ipsum, sagittis integer. Sed at at sit suspendisse imperdiet.vcipsum, sagittis integer. Sed at at sit suspendisse imperdiet.</p>
                   </motion.div>
                 </ACmainContainer>  
-            <div className='w-100p min-h-[70vh] mb-10 oveflow-hidden '>
+            <div className='w-100p min-h-[70vh] mb-10 oveflow-hidden xl:min-h-1/3'>
                 <motion.h1 
                 initial="hidden"
                 whileInView="visible"

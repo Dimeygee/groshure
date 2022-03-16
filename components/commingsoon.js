@@ -21,8 +21,8 @@ export default function ComingSoon(){
     
 
     return(
-        <div className='min-h-1/5  md:flex items-center flex-row md:my-0 mt-[100px] md:mt-0 md:mb-0 mb-[150px] '>
-            <div className='mx-auto min-h-1/4 md:flex'>
+        <div className='min-h-1/5  md:flex items-center flex-row md:my-0 mt-[100px] md:mt-0 md:mb-0 mb-[150px] xl:min-h-[50vh]'>
+            <div className='mx-auto min-h-1/4 md:flex xl:min-h-1/2'>
                 <motion.div 
                     variants={left}
                     custom={1}

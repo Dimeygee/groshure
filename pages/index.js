@@ -92,7 +92,7 @@ export default function Home() {
           <meta name="twitter:url" content="" />
         </Head>
         <MobileHeader />
-      <header  className='hidden  min-h-[100vh] container mx-auto w-85 md:flex items-center md:min-h-[75vh] md:mt-0 mt-5 ' >
+      <header  className='hidden  min-h-[100vh] container mx-auto w-85 md:flex items-center md:min-h-[75vh] md:mt-0 mt-5 xl:min-h-1/3' >
           <motion.div 
             initial="hidden"
             animate="visible"

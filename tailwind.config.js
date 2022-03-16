@@ -20,6 +20,8 @@ module.exports = {
     minHeight: {
       '1/5': '100vh',
       '1/4': '90vh',
+      '1/3': '25vh',
+      '1/2': '35vh',
     },
     extend: {
       width: {

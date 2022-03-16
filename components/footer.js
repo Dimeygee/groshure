@@ -18,7 +18,7 @@ export default function Footer() {
     const router = useRouter()  
 
     return(
-        <div className='min-h-[50vh]  font-[circularstd] relative z-0'>
+        <div className='min-h-[50vh]  font-[circularstd] relative z-0 xl:min-h-1/3'>
             <div className={router.asPath.slice(1,router.asPath.length) === "contact" ? "text-center md:p-[200px] p-[200px]  pt-[200px]  md:pb-[100px] bg-[#FFFAEB] md:px-0 px-[40px]" : "text-center md:p-[80px]  md:px-0 px-6 py-20 bg-[#FFFAEB]" }>
                 <motion.div 
                     initial={{ y: 100 }}
