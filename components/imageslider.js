@@ -2,6 +2,8 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { wrap } from "popmotion";
 import Image from "next/image"
+import facebook from "../public/facebook.png"
+import twitter from "../public/twitter.png"
 
 
 
@@ -37,30 +39,16 @@ const variants = {
 export default function ImageSlider({imageSlider}){
 
     const [[page, direction], setPage] = useState([0, 0]);
-
-    const paginate = (newDirection= number) => {
-        setPage([page + newDirection, newDirection]);
-      };
-
-    
-
     const imageIndex = wrap(0, imageSlider.length, page);
 
-    const skipToImage = (imageid=number) => {
-      let changeDirection 
-      if(imageid > imageIndex){
-        changeDirection = 1
-      }else if(imageid < imageIndex ){
-        changeDirection = -1
-      }
-      setPage([imageid,changeDirection ])
-    }
 
-
+    const paginate = (newDirection= number) => {
+      setPage([page + newDirection, newDirection]);
+    };
 
     return (
-      <div className='min-h-[450px] oveflow-hidden'>
-        <div className='relative min-h-[780px]  md:min-h-[410px]'>
+      <div className='md:min-h-[480px] overflow-hidden'>
+        <div className='relative min-h-[940px] md:min-h-[400px] 2xl:min-h-[600px] 4xl:min-h-[1200px] 4xl:mt-20'>
         <AnimatePresence initial={false} custom={direction}>
             <motion.div
               key={page}
@@ -86,51 +74,61 @@ export default function ImageSlider({imageSlider}){
                 }
               }}
             className='w-100p h-[100%] absolute'>
-              
-              <div className='flex pt-6 md:flex-row flex-col '>
+              <div className='flex pt-6 md:flex-row flex-col md:mt-[50px] justify-evenly '>
                         <motion.div
                         initial={{ opacity: 0, x: 100 }}
                         whileInView={{ opacity: 1, x : 0 , transition: {
                             delay: 0.3
                         }}}
-                        className='order-1 sm:order-1 md:order-2 md:pl-10 md:w-[40%]  md:text-left text-center md:mt-0 mt-10 font-[circularstd]  py-[40px]'>
-                            <h4 className='text-24 text-[#141414] font-bold'>{imageSlider[imageIndex].feedback}</h4>
-                            <small className='text-18 text-[#141414] mt-3 mb-4 inline-block'>{imageSlider[imageIndex].title}</small>
-                            <p className='text-24 text-[#616161]'>{imageSlider[imageIndex].para}</p>
+                        className='order-1 sm:order-1 md:order-2  md:text-left text-center md:mt-0 mt-10 font-[circularstd] md:w-[60%]  lg:pl-20 lg:pr-10 4xl:pl-64 '>
+                           <div className='flex'>
+                              <div className="xl:leading-[35px] 3xl:leading-[45px] 4xl:leading-[95px]">
+                                <h4 className='text-24 text-[#141414] font-bold 4xl:text-60 2xl:text-30 3xl:text-32'>{imageSlider[imageIndex].feedback}</h4>
+                                <small className='text-18 text-[#141414] mt-3 mb-4 inline-block 2xl:my-6 4xl:text-46 4xl:my-9 2xl:text-24 3xl:text-25'>{imageSlider[imageIndex].title}</small>
+                                <p className='text-[20px] text-[#616161] 4xl:text-[54px] 2xl:text-25 3xl:text-27'>{imageSlider[imageIndex].para}</p>
+                              </div>
+                           </div>
+                           <div className='flex py-7 md:py-7 4xl:mt-20 justify-center md:justify-start'>
+                             <div className='relative w-[20px] h-[20px] mr-7 2xl:w-[25px] 2xl:h-[25px] 4xl:w-[60px] 4xl:h-[60px]'>
+                               <Image src={facebook} layout='fill' alt="facebook" />
+                             </div>
+                             <div className='relative w-[20px] h-[20px] 2xl:w-[25px] 2xl:h-[25px] 4xl:w-[60px] 4xl:h-[60px]'>
+                               <Image src={twitter} layout='fill' alt="twitter" />
+                             </div>
+                           </div>
                         </motion.div>
                         <motion.div
                         initial={{ opacity: 0, x: -100 }}
                         whileInView={{ opacity: 1, x : 0 , transition: {
                             delay: 0.3
                         }}}
-                        className='sm:order-1 md:order-2 md:w-[60%] flex justify-center items-center md:mt-0 mt-5'>
-                            <div className='relative md:w-[200px] w-[200px] h-[90px] md:h-[180px] md:translate-x-[80px] translate-x-[20px] '>
-                                <Image src={ imageSlider[imageIndex].images[0] } alt="image" layout="fill"  />
-                            </div>
-                            <div className='relative border-white border-[10px] md:border-x-[20px] md:w-[300px] md:h-[270px] w-[350px] h-[160px] z-10 rounded-full'>
+                        className='sm:order-1 md:order-1 flex justify-center items-center md:mt-0 mt-5'>
+                            <div className='relative border-white border-[10px] md:border-x-[20px] md:w-[260px] md:h-[240px] w-[250px] h-[250px] z-10 rounded-full 4xl:w-[670px] 4xl:h-[670px] 4xl:border-x-[45px] md:mb-20 2xl:w-[300px] 2xl:h-[300px] 3xl:w-[320px] 3xl:[320px]'>
                                 <Image src={ imageSlider[imageIndex].images[1] }  alt="image" layout="fill"  />
                             </div>
-                            <div className='relative  md:w-[200px] w-[200px] h-[90px] md:h-[180px] md:-translate-x-[80px] -translate-x-[20px]'>
-                                <Image src={ imageSlider[imageIndex].images[2] }  alt="image" layout="fill"  />
-                            </div>
                         </motion.div>
+                        <div className='mt-10 xs:mt-0 md:mt-0 order-3 flex md:flex-col justify-evenly md:py-5 md:pb-20  md:order-3'>
+                              <motion.div 
+                               initial={{ opacity: 0, y: -100 }}
+                               whileInView={{ opacity: 1, y : 0 , transition: {
+                                   delay: 0.3
+                               }}}
+                              className='relative w-[80px] h-[80px] border-[3px] border-[#FD4C5C] rounded-full cursor-pointer 2xl:w-[90px] 2xl:h-[90px] 3xl:w-[100px] 3xl:h-[100px] 4xl:w-[210px] 4xl:h-[210px]' onClick={() => paginate(1)}>
+                                <Image  src={imageSlider[imageIndex].images[1]} alt='cofounder' layout='fill' />
+                              </motion.div>
+                              <motion.div 
+                              initial={{ opacity: 0, y: 100 }}
+                              whileInView={{ opacity: 1, y : 0 , transition: {
+                                  delay: 0.3
+                              }}}
+                              className='relative w-[80px] h-[80px] rounded-full cursor-pointer 3xl:w-[100px] 3xl:h-[100px] 4xl:w-[210px] 4xl:h-[210px]' onClick={() => paginate(-1)}>
+                                <Image  src={imageSlider[imageIndex].images[0]} alt='cofounder' layout='fill' />
+                              </motion.div>
+                            </div>
                     </div>
             </motion.div>
           </AnimatePresence>
-          <div className="next" onClick={() => paginate(1)}>
-            {"‣"}
-          </div>
-          <div className="prev" onClick={() => paginate(-1)}>
-            {"‣"}
-          </div>
-        </div>
-        <div className='flex items-center justify-center'>
-              <div className=' w-[80px] flex justify-between items-center'>
-              <div style={ imageSlider[imageIndex].id == 1 ? { width: "18px", height: "18px" , border:"4px solid #FD4C5C", borderRadius: "50%", backgroundColor: "#fff",  } : { width: "13px", height: "13px",  borderRadius: "50%", backgroundColor: "#FD4C5C", opacity:0.5    } } onClick={() => skipToImage(0)}></div>
-                  <div style={ imageSlider[imageIndex].id == 2 ? { width: "18px", height: "18px",  border:"4px solid #FD4C5C", borderRadius: "50%", backgroundColor: "#fff" } : { width: "13px", height: "13px",  borderRadius: "50%", backgroundColor: "#FD4C5C", opacity:0.5  } } onClick={() => skipToImage(1)}></div>
-                  <div style={ imageSlider[imageIndex].id == 3 ? { width: "18px", height: "18px", border:"4px solid #FD4C5C", borderRadius: "50%", backgroundColor: "#fff" } : { width: "13px", height: "13px",  borderRadius: "50%", backgroundColor: "#FD4C5C" , opacity:0.5   } } onClick={() => skipToImage(2)}></div>  
-                </div>                 
-          </div>          
+        </div>        
       </div>
     )
 }

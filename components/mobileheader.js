@@ -1,9 +1,12 @@
-import Image from "next/image"
 import styles from "./stroke.module.css"
 import WaitList from "./waitlist"
-import mobilefruits from "../public/mobilefruits.svg"
 import MobileButton  from "./mobilebutton"
 import { motion } from "framer-motion"
+import {mobileHeaderImages} from "./sliderutils.js"
+import MobileHeaderSlider from "./mobileheaderslider.js"
+import { useMediaQuery } from 'react-responsive'
+import { useState } from "react"
+
 
 
 const container = {
@@ -32,14 +35,42 @@ const container = {
       hidden: { opacity: 0, y: 100 },
   }
 
-  const itemImage = {
-    visible: { opacity: 1, y: 0 },
-    hidden: { opacity: 0, y: 100 },
-  }
-
+  
 
 
 export default function MobileHeader () {
+
+  const style={ 
+    backgroundImage: "url('https://res.cloudinary.com/dimejiscloud/image/upload/c_scale,h_2336,w_1000/v1648070370/herogreen_cjtuel.png')",
+    backgroundRepeat:"no-repeat",
+    backgroundPosition:"center",
+    backgroundSize:"cover",
+    backgroundColor:"#A3D32A",
+   }
+
+   const [waitlist, joinWaitlist ]=useState("")
+
+    async function handleSubmit (e) {
+      e.preventDefault()
+      
+     
+
+      await fetch("/api/waitlist",{
+          method:"POST",
+          body:JSON.stringify({waitlist})
+      })
+
+      joinWaitlist("")
+
+  }
+  
+
+  const isLargeScreenSize = useMediaQuery({
+    query: '(min-width: 768px)'
+  })
+
+  if (isLargeScreenSize) return ""
+
 
     return(
        <div className='md:hidden'>
@@ -47,6 +78,7 @@ export default function MobileHeader () {
             initial="hidden"
             animate="visible"
             variants={container}
+            style={style}
             className='mobileheader overflow-y-hidden' >
            <motion.div 
            custom={1}
@@ -56,24 +88,18 @@ export default function MobileHeader () {
                 <motion.div
                 custom={3}
                 variants={items}
-                className='text-base my-6'>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis vectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis</motion.div>
-                <motion.div
-                custom={4}
-                variants={items}
-                >
-                    <WaitList width="100%" fontSize="14px"  />
-                </motion.div>
-                <MobileButton width="75%" paddingBottom="13px" paddingTop="13px"  backgroundColor="#FD4C5C" color='white' borderRadius="25px" fontSize={"14px"} marginTop="27px" >Join waitlist</MobileButton>
+                className='text-base my-6'>Groshure provides a multi-shopping experience for customers to shop with there different preferred stores on one platform.</motion.div>
+                <form  method="POST" onSubmit={handleSubmit}>
+                  <motion.div
+                  custom={4}
+                  variants={items}
+                  >
+                      <WaitList width="100%" fontSize="14px"  />
+                  </motion.div>
+                  <MobileButton width="75%" paddingBottom="13px" paddingTop="13px"  backgroundColor="#FD4C5C" color='white' borderRadius="25px" fontSize={"14px"} marginTop="27px" >Join waitlist</MobileButton>
+                </form>
             </motion.div>
-            <motion.div
-            variants={itemImage}
-            initial="hidden"
-            whileInView="visible"
-            className='h-[300px] grow'>
-                <div className='relative fruits w-100p h-[100%]  translate-y-3'>
-                  <Image src={mobilefruits} alt='mobilefruits' layout="fill" priority/>
-                </div>
-            </motion.div>
+            <MobileHeaderSlider mobileHeaderImages={mobileHeaderImages} />
         </motion.div>
        </div>
     )

@@ -8,7 +8,7 @@ const questions = [
     },
     {
         id: 2,
-        question: "How Can I Change My Shipping Address?",
+        question: "How does Groshure work?",
         reply:" International orders normally arrive within 2-4 weeks of shipping. Please note that these orders need to pass through the customs office in your country before it will be released for final delivery, which can occasionally cause additional delays."
     },
     {
@@ -23,7 +23,7 @@ const questions = [
     },
     {
         id: 5,
-        question: "What Happens if There's Been A Delivery Mishap To My Order?",
+        question: "What is Groshure's Inspiration?",
         reply:"Domestic orders normally arrive within 3-7 days of shipping, unless otherwise noted.International orders normally arrive within 2-4 weeks of shipping. Please note that these orders need to pass through the customs office in your country before it will be released for final delivery, which can occasionally cause additional delays."
     },
 ]

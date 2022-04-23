@@ -3,12 +3,36 @@ import Image from "next/image"
 import yellowblack from "../public/yellowblack.svg"
 import redcircle from "../public/redcircle.svg"
 import greencircle from "../public/greencircle.svg"
-import fpframe from "../public/fpframe.svg"
 import secpframe from "../public/secpframe.svg"
 import MediaQuery from "react-responsive"
 import { motion } from "framer-motion"
-import Script from "next/script"
 import SS_steps from "./ss_steps"
+import howlogin from "../public/howlogin.png"
+import howgroceries from "../public/howgroceries.png"
+import howcheckout from "../public/howcheckout.png"
+
+ 
+
+let desktopGreenImage = {
+    backgroundImage: "url('https://res.cloudinary.com/dimejiscloud/image/upload/v1648070429/desktopgreen_eo2jxp.png')",
+    backgroundColor:"#A3D32A",
+}
+
+let  desktopRedImage = {
+    backgroundImage : "url('https://res.cloudinary.com/dimejiscloud/image/upload/v1648070429/desktopred_qr7tei.png')",
+    backgroundColor:"#FD4C5C",
+}
+
+let desktopBlackImage = {
+    backgroundImage : "url( 'https://res.cloudinary.com/dimejiscloud/image/upload/v1648070429/desktopblack_hgravu.png')",
+    backgroundColor:"#000000",
+}
+
+let desktopYellowImage = {
+    backgroundImage : "url( 'https://res.cloudinary.com/dimejiscloud/image/upload/v1648070429/desktopyellow_wle8vp.png')",
+    backgroundColor:"#FFBB00",
+}
+
 
 const element1 = {
     visible: i => ({ 
@@ -45,17 +69,19 @@ const right={
 
 export  default function Steps(){
 
+    
+    
     return(
-        <div className='min-h-1/5 '>
-             <div className='container mx-auto md:my-auto min-h-1/5 w-85 py-[80px] relative '>
-                <div className='flex justify-center relative md:h-[100px] h-[200px]'>
+        <div className='min-h-1/5'>
+             <div className='mx-auto xl:my-auto min-h-1/5 w-85 md:w-[75%] xl:w-[78%] 2xl:w-[80%] 3xl:w-[75%] py-[200px] md:py-[80px] relative 4xl:w-[66%]'>
+                <div className='flex justify-center relative h-[200px] xl:h-[100px] md:h-[100px] lg:h-[150px]'>
                         <div className='inline-block text-center absolute z-10'>
                             <div >
-                                <small className=' font-medium text-base leading-3  font-[circularstd]' >Steps</small>
-                                <p className='font-[Righteous] text-36'><span className='text-groshure-green'>How it</span> <span className='text-groshure-red'>works?</span></p>
+                                <small className=' font-medium text-base leading-3  font-[circularstd] 4xl:text-46 2xl:text-[22px] 3xl:text-25' >Steps</small>
+                                <p className='font-[Righteous] text-36 2xl:text-42'><span className='text-groshure-green 4xl:text-74 3xl:text-46'>How it</span> <span className='text-groshure-red 4xl:text-74 2xl:text-42 3xl:text-46'>works?</span></p>
                             </div>
                         </div>
-                        <div className='absolute w-120 h-120  right-[35%] -top-3 -z-0 ' >
+                        <div className='absolute w-120 h-120 xs:right-0  md:right-[25%] xl:right-[35%] 2xl:right-[37%] -top-3 -z-0  4xl:w-[200px] 4xl:h-[200px]' >
                             <Image src={two} alt='two' layout="fill" className='opacity-30'/>
                         </div>
                 </div>
@@ -63,54 +89,61 @@ export  default function Steps(){
                     <SS_steps />
                 </MediaQuery>
                 <MediaQuery minWidth={767}>
-                    <div className='d_hidden_steps hidden md:block w-[450px] h-[450px]  absolute top-[120px] -left-[100px]'>
+                    <div className='d_hidden_steps hidden md:block xl:block w-[450px] h-[450px]  absolute top-[120px] -left-[100px] 4xl:w-[850px] 4xl:h-[850px] 4xl:-left-[250px] 4xl:top-[10px]'>
                         <Image src={redcircle} alt="redcircle" layout="fill" />
                     </div>
-                    <div className='d_hidden_steps hidden md:block w-[550px] h-[550px]  absolute top-[40%] -right-[100px]'>
+                    <div className='d_hidden_steps hidden md:block xl:block w-[550px] h-[550px]  absolute top-[40%] -right-[100px] 4xl:w-[850px] 4xl:h-[850px] 4xl:-right-[200px]'>
                         <Image src={yellowblack} alt="yellowblack" layout="fill" />
                     </div>
-                    <div className='d_hidden_steps hidden md:block w-[450px] h-[450px]  absolute  -left-[100px] bottom-0'>
+                    <div className='d_hidden_steps hidden md:block xl:block w-[450px] h-[450px]  absolute  -left-[100px] bottom-0 4xl:w-[850px] 4xl:h-[850px] 4xl:-left-[270px] 4xl:-bottom-[100px]'>
                         <Image src={greencircle} alt="greencircle" layout="fill" />
                     </div>
-                    <div  class='py-16  px-20 grid gap-3  font-[circularstd]'>
+                    <div  className='py-16 px-20 md:px-0 xl:px-20 grid gap-3  font-[circularstd] 4xl:mt-[100px] 4xl:gap-8'>
                     <motion.div 
                     variants={element1}
                     custom={2}
                     initial="hidden"
                     whileInView="visible"
+                    style={desktopGreenImage}
                     className='lazy' id="span4">
-                            <div className='w-[50%] h-[100%] '>
-                                    <div className=' py-20 px-10'>
-                                        <div className=' mb-3'>
-                                            <span className='rounded-full w-40 h-40  bg-white inline-block text-center font-black leading-[40px]'>1</span>
+                            <div className='w-[50%] h-[100%] flex items-center'>
+                                    <div className=' py-[90px] min-h-[100%] xl:min-h-[40px] justify-between px-10 4xl:px-[85px] flex flex-col'>
+                                        <div>
+                                            <span className='rounded-full w-40 h-40  bg-white inline-block text-center font-black leading-[40px] 4xl:w-[80px] 4xl:h-[80px] 4xl:leading-[80px]  4xl:text-42  2xl:text-[30px] 2xl:w-[50px] 2xl:h-[50px] 2xl:leading-[50px] 3xl:text-36 3xl:w-[60px] 3xl:h-[60px] 3xl:leading-[60px]'>1</span>
                                         </div>
-                                        <h2 class='text-white font-black leading-[40px] md:text-32 text-24'>Headliine title here</h2>
-                                        <p class='text-base text-white leading-[25px] mt-3 '>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus am, purus sit amet luctus am, purus sit amet luctus</p>
+                                        <h2 className='text-white font-black leading-[40px] xl:text-32 text-24 4xl:text-74 4xl:py-[15px] 4xl:my-10 xl:my-4 2xl:text-[40px] 2xl:my-7 3xl:text-42 3xl:my-9 md:text-27'>Signup/Login</h2>
+                                        <p className='text-base text-white leading-[25px] 4xl:text-42 4xl:leading-[57px] 2xl:text-[22px] 2xl:leading-7 3xl:text-25'>Sign up to the platform by entering your credentials or login as an existing user and shop across multiple list of groceries at your fingertips.</p>
                                     </div>
                             </div>
                             <div className='w-[50%] h-[100%] flex items-end justify-center'>
-                                <div className=' w-[224px] h-[100%] relative'>
-                                    <Image src={fpframe} alt="fpframe"  layout="fill"  />
+                                <div className=' w-[230px] h-[95%] relative 4xl:w-[560px] 2xl:w-[300px]'>
+                                    <Image src={howlogin} alt="howlogin"  layout="fill"  />
                                 </div>
                             </div>
                         </motion.div>
-                        <div class='col-span-4  flex justify-between'>
+                        <div className='col-span-4  flex justify-between'>
                         <motion.div
                         variants={element2}
-                        custom={2}
+                        custom={1}
                         initial="hidden"
                         whileInView="visible"
-                        className='lazy' id="span2">
-                            <div >
-                                <div className='p-10'>
-                                    <span className='rounded-full w-40 h-40  bg-white inline-block text-center font-black leading-[40px]'>2</span>
-                                    <h2 className='text-white font-black leading-[40px] text-32 mt-5'>Headliine title here</h2>
-                                    <p className='text-base text-white leading-[25px] mt-3'>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus am, purus sit amet luctus am, purus sit amet luctus</p>
+                        style={desktopRedImage}
+                        className='lazy overflow-hidden' id="span3">
+                            <div className='4xl:h-[40%] flex items-center  xl:h-[40%] grow' >
+                                <div className='xl:p-12 md:p-[1.5rem]'>
+                                    <span className='rounded-full w-40 h-40  bg-white inline-block text-center font-black leading-[40px] 4xl:w-[80px] 4xl:h-[80px] 4xl:leading-[80px] 4xl:text-42 2xl:text-[30px] 2xl:w-[50px] 2xl:h-[50px] 2xl:leading-[50px] 3xl:text-36 3xl:w-[60px] 3xl:h-[60px] 3xl:leading-[60px]'>2</span>
+                                    <h2 className='text-white font-black leading-[40px] text-32 mt-5 4xl:text-74 4xl:py-[15px] 4xl:my-10 2xl:text-[40px] 2xl:my-7 3xl:text-42 3xl:my-9 md:text-27'>Select stores</h2>
+                                    <p className='text-base text-white leading-[25px] mt-3 4xl:text-42 2xl:text-[22px] 2xl:leading-7 4xl:leading-[57px] 3xl:text-25'>Search through our availble stores and browse though multiple grocery items of your choice.</p>
                                 </div>
                              </div>
-                            <div className=' h-[60%] w-[100%] flex justify-center '>
-                                <div className='relative w-[220px]'>
-                                    <Image src={secpframe} alt="secpframe" layout="fill"  />
+                            <div className='h-[55%] w-[100%] flex justify-center  4xl:h-[60%]'>
+                                <div className='groceries relative 2xl:block 2xl:h-[100%] w-[220px] 4xl:w-[620px] 4xl:h-[100%] 2xl:w-[300px] oveflow-hidden'>
+                                    <MediaQuery minWidth={2000}>
+                                            <Image src={secpframe} alt="howgroceries" layout="responsive"  />
+                                    </MediaQuery>
+                                    <MediaQuery maxWidth={2000}>
+                                        <Image src={secpframe} alt="howgroceries" layout="responsive"  />
+                                    </MediaQuery>
                                 </div>
                             </div>
                         </motion.div>
@@ -119,17 +152,23 @@ export  default function Steps(){
                         custom={1}
                         initial="hidden"
                         whileInView="visible"
-                        className='lazy' id="span3">
-                            <div >
-                                <div className='p-10'>
-                                    <span className='rounded-full w-40 h-40  bg-white inline-block text-center font-black leading-[40px]'>3</span>
-                                    <h2 className='text-white font-black leading-[40px] text-32 mt-5'>Headliine title here</h2>
-                                    <p className='text-base text-white leading-[25px] mt-3'>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus am, purus sit amet luctus am, purus sit amet luctus</p>
+                        style={desktopBlackImage}
+                        className='lazy overflow-hidden' id="span3">
+                            <div className='4xl:h-[40%] flex items-center  xl:h-[40%] grow' >
+                                <div className='xl:p-12 md:p-[1.5rem]'>
+                                    <span className='rounded-full w-40 h-40  bg-white inline-block text-center font-black leading-[40px] 4xl:w-[80px] 4xl:h-[80px] 4xl:leading-[80px] 4xl:text-42 2xl:text-[30px] 2xl:w-[50px] 2xl:h-[50px] 2xl:leading-[50px] 3xl:text-36 3xl:w-[60px] 3xl:h-[60px] 3xl:leading-[60px]'>3</span>
+                                    <h2 className='text-white font-black leading-[40px] text-32 mt-5 4xl:text-74 4xl:py-[15px] 4xl:my-10 2xl:text-[40px] 2xl:my-7 3xl:text-42 3xl:my-9 md:text-27'>Select groceries</h2>
+                                    <p className='text-base text-white leading-[25px] mt-3 4xl:text-42 2xl:text-[22px] 2xl:leading-7 4xl:leading-[57px] 3xl:text-25'>Select groceries available for selected store, you can add multiple groceris to your cart and easily checkout when ready.</p>
                                 </div>
                              </div>
-                            <div className=' h-[60%] w-[100%] flex justify-center'>
-                                <div className='relative w-[220px]'>
-                                    <Image src={secpframe} alt="secpframe" layout="fill" />
+                            <div className='h-[55%] w-[100%] flex justify-center  4xl:h-[60%]'>
+                                <div className='groceries relative 2xl:block 2xl:h-[100%] w-[220px] 4xl:w-[620px] 4xl:h-[100%] 2xl:w-[300px] oveflow-hidden'>
+                                    <MediaQuery minWidth={2000}>
+                                            <Image src={howgroceries} alt="howgroceries" layout="responsive"  />
+                                    </MediaQuery>
+                                    <MediaQuery maxWidth={2000}>
+                                        <Image src={howgroceries} alt="howgroceries" layout="responsive"  />
+                                    </MediaQuery>
                                 </div>
                             </div>
                         </motion.div>
@@ -139,53 +178,26 @@ export  default function Steps(){
                         custom={2}
                         initial="hidden"
                         whileInView="visible"
+                        style={desktopYellowImage}
                         className='lazy' id="span5">
-                             <div className='w-[50%] h-[100%] '>
-                                    <div className=' py-20 px-10'>
-                                        <div className=' mb-3'>
-                                            <span className='rounded-full w-40 h-40  bg-white inline-block text-center font-black leading-[40px]'>1</span>
+                             <div className='w-[50%] h-[100%] flex items-center'>
+                                    <div className=' py-[90px] min-h-[100%] xl:min-h-[40px]  justify-between px-10 4xl:px-[85px] flex flex-col'>
+                                        <div >
+                                            <span  className='rounded-full w-40 h-40  bg-white inline-block text-center font-black leading-[40px] 4xl:w-[80px] 4xl:h-[80px] 4xl:leading-[80px]  4xl:text-42  2xl:text-[30px] 2xl:w-[50px] 2xl:h-[50px] 2xl:leading-[50px] 3xl:w-[60px] 3xl:h-[60px] 3xl:leading-[60px]'>4</span>
                                         </div>
-                                        <h2 class='text-white font-black leading-[40px] md:text-32 text-24'>Headliine title here</h2>
-                                        <p class='text-base text-white leading-[25px] mt-3 '>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus am, purus sit amet luctus am, purus sit amet luctus</p>
+                                        <h2 className='text-white font-black leading-[40px] xl:text-32 text-24 4xl:text-74 4xl:py-[15px] 4xl:my-10 xl:my-4 2xl:text-[40px] 2xl:my-7 3xl:text-42 3xl:my-9 md:text-27'>Checkout</h2>
+                                        <p className='text-base text-white leading-[25px] 4xl:text-42 4xl:leading-[57px] 2xl:text-[22px] 2xl:leading-7 3xl:text-25'>Add your preferable items to cart, confirm order details and complte your checkout. And wait for your item to be delivered to you by in minutes.</p>
                                     </div>
                             </div>
                             <div className='w-[50%] h-[100%] flex items-end justify-center'>
-                                <div className=' w-[224px] h-[100%] relative'>
-                                    <Image src={fpframe} alt="fpframe"  layout="fill" />
+                                <div className=' w-[230px] h-[95%] relative 4xl:w-[560px] 2xl:w-[300px]'>
+                                    <Image src={howcheckout} alt="howcheckout"  layout="fill"  />
                                 </div>
                             </div>
                         </motion.div>
                     </div>
                 </MediaQuery>
              </div>
-             <Script id="lazyload">
-                {` 
-                        var lazyloadimages 
-                         
-                        if("IntersectionObserver" in window){
-                            lazyloadimages = document.querySelectorAll(".lazy")
-                            var imageObserver = new IntersectionObserver(function(entries,observer){
-
-                                entries.forEach(function(entry){
-                                    if(entry.isIntersecting){
-                                        var image = entry.target
-
-                                        image.classList.remove("lazy")
-
-                                        imageObserver.unobserve(image)
-                                    }
-                                })
-
-                            })
-
-                            lazyloadimages.forEach(function(image){
-                                console.log("observed")
-                                imageObserver.observe(image);
-                            })
-                            
-                        }
-                `}
-            </Script>
         </div>
         
     )

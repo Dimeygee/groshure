@@ -9,6 +9,12 @@ import { AnimatePresence, motion } from "framer-motion"
 
 export default function MenuNav (){
 
+    if(true ) {
+        return (
+          <div className='true'>True</div>
+        )
+      }
+
     const menucontext = useContext(MenuContext)
 
     const { open, isOpen } =  menucontext
@@ -16,19 +22,16 @@ export default function MenuNav (){
     const [route] = useState(useRouter().route)
 
     const handleClick = () => {
-
-        let body = document.getElementsByTagName("body")[0]
-
-        if(!open ){
-            body.style.overflow = 'hidden'
-        }else{
-            body.style.overflow = 'auto'
-        }
-
+        checkOverflow()
         isOpen(!open)
     }
-    const toggleOverflow = () => {
 
+    const toggleOverflow = () => {
+        checkOverflow()
+    }
+
+    const checkOverflow = () => {
+        
         let body = document.getElementsByTagName("body")[0]
 
         if(!open ){
@@ -42,7 +45,7 @@ export default function MenuNav (){
 
 
     return (
-            <div className='overlay absolute top-0 bottom-0 right-0 left-0 h-[200vh] w-100p bg-[rgba(0,0,0,0.2)] z-50 '>
+            <div className='overlay absolute top-0 bottom-0 right-0 left-0 h-[200vh] w-100p bg-[rgba(0,0,0,0.2)] z-50 overflow-y-auto'>
                 <AnimatePresence>
                 <motion.div 
                         initial={{ opacity: 0, y:10 }}

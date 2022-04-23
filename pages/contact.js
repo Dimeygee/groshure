@@ -10,7 +10,8 @@ import { motion } from "framer-motion"
 import Head from "next/head"
 import ACcontainer from "../components/accontainer"
 import ACmainContainer from "../components/accmaincontainer"
-import Button from "../components/button"
+import { useState} from "react"
+
 
 
 
@@ -30,7 +31,31 @@ const elText = {
     })
 }
 
+
+
 export default function Contact(){
+
+    const [name, setName ]=useState("")
+    const [email, setEmail ]=useState("")
+    const [messages, setMessages ]=useState("")
+
+    async function handleSubmit (e) {
+      e.preventDefault()
+      
+     
+
+      await fetch("/api/contactus",{
+          method:"POST",
+          body:JSON.stringify({name, email, messages})
+      }).then(res => {
+        alert("thank you, we will get back to you soon")
+    }).catch(err => console.log(err))
+
+      setName("")
+      setEmail("")
+      setMessages("")
+
+  }
 
 
     return(
@@ -75,17 +100,17 @@ export default function Contact(){
                 initial="hidden"
                 animate='visible'
                 variants={element} 
-                className='md:text-60 text-36 font-36 font-[Righteous] text-center '>Contact <span className='text-groshure-red'>Us</span></motion.div>
+                className='md:text-60 text-36 4xl:text-[170px] font-[Righteous] text-center  2xl:text-74 3xl:text-[82px]'>Contact <span className='text-groshure-red'>Us</span></motion.div>
                 <motion.p
                  initial="hidden"
                  animate='visible'
                  variants={element} 
-                className='md:w-350 text-base mx-auto text-center my-2 font-[circularstd]'>An enim nullam tempor sapien gravida donec enimipsum porta justo congue purus pretium ligula rjbrbnrbrj</motion.p>
+                className='md:w-[500px] text-base mx-auto text-center my-2 font-[circularstd] 2xl:w-[700px] 4xl:text-[52px] 4xl:w-[1500px] 2xl:text-20 3xl:text-24'>An enim nullam tempor sapien gravida donec enimipsum porta justo congue purus pretium ligula rjbrbnrbrj</motion.p>
                 <motion.div
                  initial="hidden"
                  animate='visible'
                 variants={element} 
-                className='text-center mx-auto text-sm font-[circularstd]'>
+                className='text-center mx-auto text-sm font-[circularstd] 4xl:text-[52px] 2xl:text-20 3xl:text-24 mt-2'>
                     <Link href='/'>
                         <a >Home</a>
                     </Link>
@@ -96,26 +121,26 @@ export default function Contact(){
                 </motion.div>
             </ACcontainer>
             <ACmainContainer>
-            <div className=' md:w-50 h-614 flex items-center flex-col w-100p font-[circularstd] '>
-                    <div className='h-387 w-387 relative '>
-                        <MediaQuery maxWidth={767}>
-                            <div className=' absolute  w-100p h-100p '>
+            <div className='overflow-x-auto 2xl:overflow-x-clip  md:w-50 min-h-[614px] flex items-center flex-col w-100p font-[circularstd]'>
+                    <div className='h-387 w-387 relative 4xl:w-[1000px] 4xl:h-[1200px]  3xl:w-[70%] 3xl:h-[60vh] 2xl:w-[70%] 2xl:h-[60vh]'>
+                        <MediaQuery maxWidth={579}>
+                            <div className=' absolute w-100p h-100p  md:w-[80%]  xl:w-100p xl:h-100p '>
                                 <Image src={linepath1x} alt="linepath1x" layout="fill" />
                             </div>
                         </MediaQuery>
-                        <MediaQuery minWidth={768}>
-                            <div className=' absolute w-100p h-100p' >
+                        <MediaQuery minWidth={540}>
+                            <div className='absolute w-100p h-100p md:w-[80%]  xl:w-100p xl:h-100p 3xl:w-100p 3xl:100p 2xl:w-100p 2xl:100p' >
                                 <Image src={linepath} alt="linepath" layout="fill" />
                             </div>
                         </MediaQuery>
-                        <span className='flex flex-col items-center absolute md:-left-8 md:top-3 left-10 top-1'>
+                        <span className='flex flex-col items-center absolute md:left-8 lg:-left-8 md:top-3 left-20 top-1'>
                             <motion.span
                              initial={{ opacity: 0, scale:0 }}
                              whileInView={{ opacity: 1, scale : 1 , transition: {
                                  delay: 0.5
                              }}}
-                            className='p-2 flex top-4 bg-white w-[72px] h-[72px] rounded-full items-center justify-center  shadow-bfs'>
-                                <span className='relative  inline-block  w-[27px] h-[27px]'>
+                            className='p-2 flex top-4 bg-white w-[72px] h-[72px] rounded-full items-center justify-center  shadow-bfs 4xl:w-[200px] 4xl:h-[200px] 3xl:w-[100px] 3xl:h-[100px] 2xl:w-[80px] 2xl:h-[80px]'>
+                                <span className='relative  inline-block  w-[27px] h-[27px] 4xl:w-[67px] 4xl:h-[67px] 3xl:w-[40px] 3xl:h-[40px] 2xl:w-[40px] 2xl:h-[40px]'>
                                     <Image src={phone} alt="phone" layout="fill"/>
                                 </span>
                             </motion.span>
@@ -125,8 +150,8 @@ export default function Contact(){
                             custom={1}
                             variants={elText}
                             className='text-center mt-4 '>
-                                <h4 className='text-24 text-[#1B1C20]'>Phone</h4>
-                                <p className='text-sm text-[#797B89]'>(+1) 382 482 5791</p>
+                                <h4 className='text-24 text-[#1B1C20] 4xl:text-[56px] 3xl:text-36 2xl:text-[30px]'>Phone</h4>
+                                <p className='text-sm text-[#797B89] 4xl:text-42 3xl:text-27 2xl:text-24'>(+1) 382 482 5791</p>
                             </motion.div>
                         </span>
                         <motion.span
@@ -134,9 +159,9 @@ export default function Contact(){
                          whileInView={{ opacity: 1, scale : 1 , transition: {
                              delay: 0.9
                          }}}
-                        className=' flex flex-col items-center absolute md:-right-[60px] md:top-[38%] right-6 top-[30%]'>
-                            <span className='p-2 flex bg-white w-[72px] h-[72px] rounded-full items-center justify-center shadow-bfs'>
-                                <span className='relative  inline-block  w-[27px] h-[27px]'>
+                        className=' flex flex-col items-center absolute xl:-right-[60px] top-[38%] right-6'>
+                            <span className='p-2 flex bg-white w-[72px] h-[72px] rounded-full items-center justify-center shadow-bfs 4xl:w-[200px] 4xl:h-[200px] 3xl:w-[100px] 3xl:h-[100px] 2xl:w-[80px] 2xl:h-[80px]'>
+                                <span className='relative  inline-block  w-[27px] h-[27px] 4xl:w-[67px] 4xl:h-[67px] 3xl:w-[40px] 3xl:h-[40px] 2xl:w-[40px] 2xl:h-[40px]'>
                                     <Image src={message} alt="message" layout="fill"/>
                                 </span>
                             </span>
@@ -146,8 +171,8 @@ export default function Contact(){
                             custom={2}
                             variants={elText}
                             className='text-center mt-4'>
-                                <h4 className='text-24 text-[#1B1C20]'>Email</h4>
-                                <p className='text-sm text-[#797B89]'>capiproduct@gmail.co</p>
+                                <h4 className='text-24 text-[#1B1C20] 4xl:text-[56px] 3xl:text-36 2xl:text-[30px]'>Email</h4>
+                                <p className='text-sm text-[#797B89] 4xl:text-42 3xl:text-27 2xl:text-24'>help@groshure.com.au</p>
                             </motion.div>
                         </motion.span>
                         <motion.span
@@ -156,8 +181,8 @@ export default function Contact(){
                              delay: 0.2
                          }}}
                         className='flex flex-col items-center absolute md:-bottom-[120px] md:left-[15%] -bottom-[100px] left-[25%] '>
-                            <span className='p-2 flex bg-white w-[72px] h-[72px] rounded-full items-center justify-center  shadow-bfs'>
-                                <span className='relative  inline-block  w-[27px] h-[27px]'>
+                            <span className='p-2 flex bg-white w-[72px] h-[72px] rounded-full items-center justify-center  shadow-bfs 4xl:w-[200px] 4xl:h-[200px] 3xl:w-[100px] 3xl:h-[100px] 2xl:w-[80px] 2xl:h-[80px]'>
+                                <span className='relative  inline-block  w-[27px] h-[27px] 4xl:w-[67px] 4xl:h-[67px] 3xl:w-[40px] 3xl:h-[40px] 2xl:w-[40px] 2xl:h-[40px]'>
                                     <Image src={location} alt="location" layout="fill"/>
                                 </span>
                             </span>
@@ -167,50 +192,50 @@ export default function Contact(){
                             custom={3}
                             variants={elText}
                             className='text-center mt-4'>
-                                <h4 className='text-24 text-[#1B1C20]'>Location</h4>
-                                <p className='text-sm text-[#797B89]'>820 Pall Mall, Londo</p>
+                                <h4 className='text-24 text-[#1B1C20] 4xl:text-[56px] 3xl:text-36 2xl:text-[30px]'>Location</h4>
+                                <p className='text-sm text-[#797B89] 4xl:text-42 3xl:text-27 2xl:text-24'>Melbourne, Australia</p>
                             </motion.div>
                         </motion.span>
                     </div>
                 </div>
-                <div className='md:w-50 w-100p h-614 flex justify-center ' >
-                    <div className='md:w-[428px] w-100p h-[580px]  relative bg-[#D8D8D8] rounded-[20px] '>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.3560372037095!2d-0.1361932843222698!3d51.50668377963507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604d0d1dc04db%3A0x9a9210be2dfb7584!2sPall%20Mall%2C%20St.%20James&#39;s%2C%20London%2C%20UK!5e0!3m2!1sen!2sng!4v1646657555588!5m2!1sen!2sng" style={{ border: 0 }} loading="lazy" className='absolute w-100p h-100p rounded-[20px]'></iframe>
+                <div className='md:w-50 w-100p min-h-[614px] flex justify-center' >
+                    <div className='md:w-[428px] w-100p h-[580px]  relative bg-[#D8D8D8] rounded-[20px] 4xl:w-[1200px] 4xl:h-[1600px] 3xl:h-[80vh] 3xl:w-[600px] 2xl:h-[95vh] 2xl:w-[500px]'>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d805196.5087661069!2d144.49269512510114!3d-37.97015414769851!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad646b5d2ba4df7%3A0x4045675218ccd90!2sMelbourne%20VIC%2C%20Australia!5e0!3m2!1sen!2sng!4v1648890616134!5m2!1sen!2sng" width="600" height="450" style={{ border: 0 }}  allowfullscreen="" loading="lazy" className='absolute w-100p h-100p rounded-[20px]' referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
             </ACmainContainer>
-            <div className='md:h-[323px] min-h-[323px] md:min-h-0 flex justify-between md:mb-20 md:mt-[150px] md:flex-row flex-col'>
-                <div className='md:w-50 flex md:justify-end  md:order-1 lg:order-1 order-2'>
+            <div className='md:h-[323px] min-h-[323px] md:min-h-0 flex justify-between md:mb-20 md:mt-[150px] md:flex-row flex-col 4xl:min-h-[1000px]  4xl:mt-[500px]  3xl:min-h-[530px] 2xl:min-h-[500px]'>
+                <div className='md:w-50 flex md:justify-end  md:order-1 lg:order-1 order-2  4xl:justify-end '>
                     <motion.div 
                     initial={ { opacity: 0, x: -100 } }
                     whileInView={{ opacity : 1, x: 0}}
                     viewport={{ once: true }}
-                     className='w-[448px] font-[circularstd]  '>
-                        <form className='relative rounded-[25px] block min-h-[523px] shadow-bfs p-8 bg-white md:translate-y-0 translate-y-[90px] z-10'>
-                        <fieldset className='border-2 border-[#E8E9ED] px-4 py-1 text-sm text-[#212B08] rounded-[12px]'>
+                     className='w-[448px] font-[circularstd] 4xl:w-[1300px]  3xl:w-[75%] 2xl:w-[75%]'>
+                        <form method="POST" className='relative rounded-[25px] block min-h-[523px] shadow-bfs p-8 bg-white md:translate-y-0 translate-y-[90px] z-10 4xl:min-h-[1000px]  4xl:p-20 4xl:rounded-[55px] 3xl:min-h-[750px] 2xl:min-h-[350px] 3xl:p-10 2xl:p-11 xs:p-5'  onSubmit={handleSubmit}>
+                        <fieldset className='border-2 border-[#E8E9ED] px-4 py-1 text-sm text-[#212B08] rounded-[12px] 4xl:text-46 3xl:text-22 4xl:py-4 4xl:rounded-[35px] 4xl:mb-10 3xl:py-3 3xl:mb-8 2xl:py-2 2xl:mb-8 2xl:text-18'>
                                 <legend>Name</legend>
-                                <input type='text' placeholder='Enter name' className=' p-0 inline-block w-100p text-base border-none outline-none text-[#C6C8D3]' />
+                                <input type='text' placeholder='Enter name' className=' p-0 inline-block w-100p text-base border-none outline-none  4xl:text-46 3xl:text-22 2xl:text-18' value={name} onChange={(e) => setName(e.target.value) }/>
                             </fieldset>
-                            <fieldset className='border-2 border-[#E8E9ED] px-4 py-1 text-sm text-[#212B08] rounded-[12px] my-4'>
+                            <fieldset className='border-2 border-[#E8E9ED] px-4 py-1 text-sm text-[#212B08] rounded-[12px] my-4 4xl:text-46 4xl:py-4 4xl:rounded-[35px] 4xl:mb-10 3xl:text-22 3xl:py-3 3xl:mb-8  2xl:py-2 2xl:mb-8 2xl:text-18'>
                                 <legend>Email</legend>
-                                <input type='text' placeholder='Enter email' className=' p-0 inline-block w-100p text-base border-none outline-none text-[#C6C8D3]' />
+                                <input type='text' placeholder='Enter email' className=' p-0 inline-block w-100p text-base border-none outline-none  4xl:text-46 3xl:text-22 2xl:text-18'  value={email} onChange={(e) => setEmail(e.target.value) } />
                             </fieldset>
-                            <fieldset className='border-2 border-[#E8E9ED] px-4 py-1 text-sm text-[#212B08] rounded-[12px] mb-10'>
+                            <fieldset className='border-2 border-[#E8E9ED] px-4 py-1 text-sm text-[#212B08] rounded-[12px] mb-12 4xl:text-46 4xl:py-4 4xl:mb-[140px] 4xl:rounded-[35px] 3xl:text-22 3xl:py-3 3xl:mb-12 2xl:py-3 2xl:mb-12 2xl:text-18'>
                                 <legend>Message</legend>
-                                <textarea placeholder="Write your message" className='text-[#C6C8D3] w-100p h-[159px]'>
+                                <textarea placeholder="Write your message" className=' w-100p h-[159px] 4xl:text-46 4xl:h-[350px] outline-none 3xl:text-22 2xl:text-18' value={messages} onChange={(e) => setMessages(e.target.value) }>
 
                                 </textarea>
                             </fieldset>
-                            <Button width='100%' paddingTop="14px" paddingBottom="14px" borderRadius="12px" fontSize="16px" backgroundColor="#FD4C5C" color='#fff' display="block" >Submit</Button>
+                            <button className='py-2 text-base md:py-2 2xl:py-4 2xl:text-18 4xl:py-10 4xl:text-46 4xl:rounded-[35px] w-100p block bg-groshure-red text-white rounded-[12px] 3xl:text-22'>submit</button>
                         </form>
                     </motion.div>
                 </div>
                 <motion.div
                 initial={ { opacity: 0, x: 100 } }
                 whileInView={{ opacity : 1, x: 0}}
-                className='md:w-50 md:px-20  flex flex-col md:justify-end  md:text-right text-center md:order-2 order-1 '>
-                    <h1 className=' text-[#1B1C20] font-[Righteous] md:text-40 text-36'>Get In Touch</h1>
-                    <p className='text-[#797B89] text-base mt-2 font-[circularstd]'>Contact us if you have any questions about our company or products. We will try to provide an answer within few days. </p>
+                className='md:w-50 md:px-20  flex flex-col md:justify-end  md:text-right text-center md:order-2 order-1 4xl:p-[200px]'>
+                    <h1 className=' text-[#1B1C20] font-[Righteous] md:text-40 text-36 4xl:text-[100px] 3xl:text-[64px]  2xl:text-[50px]'>Get In Touch</h1>
+                    <p className='text-[#797B89] text-base mt-2 font-[circularstd] 4xl:text-46 3xl:text-24 3xl:pl-20 2xl:text-20 2xl:pl-20 '>Contact us if you have any questions about our company or products. We will try to provide an answer within few days. </p>
                 </motion.div>
             </div>
         </div>
