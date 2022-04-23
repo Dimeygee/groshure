@@ -9,9 +9,9 @@ export default (req , res) => {
 
 
     const msg = {
-        to: 'untamed737@gmail.com',
-        from: 'dimeygee1@gmail.com', 
-        subject: 'Groshure Waitlist',
+        to: 'help@groshure.com.au',
+        from: 'help@groshure.com.au', 
+        subject: "Groshure's waitlist",
         text: `${body.waitlist}`,
         html: `<!DOCTYPE html">
         <html lang="en">

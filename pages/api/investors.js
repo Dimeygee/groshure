@@ -9,9 +9,9 @@ export default (req , res) => {
   const body = JSON.parse(req.body);
 
   const msg = {
-      to: 'untamed737@gmail.com',
-      from: 'dimeygee1@gmail.com', 
-      subject: 'Sending with Twilio SendGrid is Fun',
+      to: 'help@groshure.com.au',
+      from: 'help@groshure.com.au', 
+      subject: "Groshure's Investors",
       text: 'and easy to do anywhere, even with Node.js',
       html: `<!DOCTYPE html">
       <html lang="en">
@@ -48,7 +48,7 @@ export default (req , res) => {
                 <br/>
                 <div>
                   <p>Addition Info</p>
-                  <p style="font-weight:bolder;">${body.AdditionInfo}</p>
+                  <p style="font-weight:bolder;">${body.additionInfo}</p>
                 </div>
                 <br/>
                 <br/>

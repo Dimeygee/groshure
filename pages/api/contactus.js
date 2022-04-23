@@ -8,9 +8,9 @@ export default (req , res) => {
     const body = JSON.parse(req.body);
 
     const msg = {
-        to: 'untamed737@gmail.com',
-        from: 'dimeygee1@gmail.com', 
-        subject: 'Sending with Twilio SendGrid is Fun',
+        to: 'help@groshure.com.au',
+        from: 'help@groshure.com.au', 
+        subject: 'Groshure Contact Form',
         text: 'and easy to do anywhere, even with Node.js',
         html: `<!DOCTYPE html">
         <html lang="en">
@@ -25,7 +25,7 @@ export default (req , res) => {
           <div style="display: flex;justify-content: center;align-items: center;border-radius: 5px;overflow: hidden; font-family: 'helvetica', 'ui-sans';">              
                 </div>
                 <div style="padding-left:5px; padding-right:5px; color:white;">
-                  <h3>New form submission on Groshure contact</h3><b>
+                  <h3>New form submission on Groshure contact us form</h3><b>
                   <p>someone just submitted a form on Groshure. Here's what they had to say</p><br/><br/>
                   <div>
                     <p>Name</p>
