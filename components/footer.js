@@ -35,7 +35,7 @@ export default function Footer() {
     }
 
     return(
-        <div className='min-h-[50vh]  font-[circularstd] relative z-0 4xl:min-h-1/3'>
+        <div className='min-h-[40vh]  font-[circularstd] relative z-0 4xl:min-h-1/3'>
             <div className={router.asPath.slice(1,router.asPath.length) === "contact" ? "text-center md:p-[200px] p-[200px]  pt-[200px]  md:pb-[100px] bg-[#FFFAEB] md:px-0 px-[40px] 4xl:pt-[650px] 4xl:pb-[250px]" : "text-center md:p-[80px]  md:px-0 px-6 py-20 3xl:py-24  4xl:py-[250px] bg-[#FFFAEB]" }>
                 <motion.div 
                     initial={{ y: 100 }}

@@ -79,7 +79,7 @@ export default function Support() {
                                 </Button>
                                 </div>
                             </MediaQuery>
-                            <MediaQuery maxWidth={545}>
+                            <MediaQuery maxWidth={540}>
                                 <div className='mt-4'>
                                     <MobileButton backgroundColor="#FD4C5C" color="white" paddingTop={'10px'} paddingBottom={'10px'} width='55%' borderRadius='30px' fontSize={"15px"} setStore={setStore} isStoreOpen={isStoreOpen} name="store">
                                         Apply
@@ -118,7 +118,7 @@ export default function Support() {
                                 </Button>
                                 </div>
                             </MediaQuery>
-                            <MediaQuery maxWidth={763}>
+                            <MediaQuery maxWidth={540}>
                                 <div className='mt-4'>
                                     <MobileButton backgroundColor="#FD4C5C" color="white" paddingTop={'10px'} paddingBottom={'10px'} width='55%' borderRadius='30px' fontSize={"15px"} isShopper={isShopper} setShopper={setShopper} name="shopper">
                                         Apply
@@ -157,7 +157,7 @@ export default function Support() {
                                 </Button>
                                 </div>
                             </MediaQuery>
-                            <MediaQuery maxWidth={763}>
+                            <MediaQuery maxWidth={540}>
                                 <div className='mt-4'>
                                     <MobileButton backgroundColor="#FD4C5C" color="white" paddingTop={'10px'} paddingBottom={'10px'} width='55%' borderRadius='30px' fontSize={"15px"} isInvestor={isInvestor} setInvestor={setInvestor} name="investor">
                                         Apply

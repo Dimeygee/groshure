@@ -96,7 +96,7 @@ export default function Features() {
                             </div>
                         </motion.div>
                         <motion.div
-                        custom={1}
+                        custom={2}
                         variants={child}
                         className=' text-center '>
                             <div className='flex justify-center '>
@@ -112,7 +112,7 @@ export default function Features() {
                             </div>
                         </motion.div>
                         <motion.div
-                        custom={1}
+                        custom={3}
                         variants={child}
                         className=' text-center '>
                             <div className='flex justify-center '>

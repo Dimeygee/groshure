@@ -111,7 +111,7 @@ export default function NavLayout () {
           >
           <Button>Join waitlist</Button>
           </motion.div>
-          <MediaQuery maxWidth={767} >
+          <MediaQuery maxWidth={540} >
             <div className='w-[30px] min-h-[30px]  flex justify-center items-center flex-col' onClick={handleClick}>
               <motion.div
               variants={right}

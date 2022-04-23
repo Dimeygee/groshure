@@ -49,7 +49,7 @@ export default function ComingSoon(){
                     custom={1}
                     initial="hidden"
                     whileInView="visible"
-                    className='sm_shopphone md:w-[60%] xl:w-[60%] 3xl:w-[60%] md:h-[60vh] lg:w-[60%]  lg:h-[100vh] xl:h-[905px] h-[75vh] relative  4xl:h-[130vh] 4xl:w-[70%] 2xl:h-[125vh] 3xl:h-[120vh] mb-[110px] md:mb-0 4xl:mb-0 '>
+                    className='sm_shopphone md:w-[60%] xl:w-[60%] 3xl:w-[60%] md:h-[100vh] lg:w-[60%]  lg:h-[100vh] xl:h-[905px] h-[75vh] relative  4xl:h-[130vh] 4xl:w-[70%] 2xl:h-[125vh] 3xl:h-[120vh] mb-[110px] md:mb-0 4xl:mb-0 '>
                     <Image src={shopphone} alt='shopphone' layout='fill' />
                 </motion.div>
                 <motion.div 

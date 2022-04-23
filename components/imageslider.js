@@ -107,7 +107,7 @@ export default function ImageSlider({imageSlider}){
                                 <Image src={ imageSlider[imageIndex].images[1] }  alt="image" layout="fill"  />
                             </div>
                         </motion.div>
-                        <div className='mt-10 xs:mt-0 md:mt-0 order-3 flex md:flex-col justify-evenly md:py-5 md:pb-20  md:order-3'>
+                        <div className='userpix mt-10 xs:mt-0 md:mt-0 order-3 flex md:flex-col justify-evenly md:py-5 md:pb-20  md:order-3'>
                               <motion.div 
                                initial={{ opacity: 0, y: -100 }}
                                whileInView={{ opacity: 1, y : 0 , transition: {

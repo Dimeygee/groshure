@@ -123,13 +123,13 @@ export default function Contact(){
             <ACmainContainer>
             <div className='overflow-x-auto 2xl:overflow-x-clip  md:w-50 min-h-[614px] flex items-center flex-col w-100p font-[circularstd]'>
                     <div className='h-387 w-387 relative 4xl:w-[1000px] 4xl:h-[1200px]  3xl:w-[70%] 3xl:h-[60vh] 2xl:w-[70%] 2xl:h-[60vh]'>
-                        <MediaQuery maxWidth={579}>
-                            <div className=' absolute w-100p h-100p  md:w-[80%]  xl:w-100p xl:h-100p '>
+                        <MediaQuery maxWidth={540}>
+                            <div className=' relative w-100p h-100p  md:w-[80%]  xl:w-100p xl:h-100p '>
                                 <Image src={linepath1x} alt="linepath1x" layout="fill" />
                             </div>
                         </MediaQuery>
-                        <MediaQuery minWidth={540}>
-                            <div className='absolute w-100p h-100p md:w-[80%]  xl:w-100p xl:h-100p 3xl:w-100p 3xl:100p 2xl:w-100p 2xl:100p' >
+                        <MediaQuery minWidth={541}>
+                            <div className='relative w-100p h-100p md:w-[80%]  xl:w-100p xl:h-100p 3xl:w-100p 3xl:100p 2xl:w-100p 2xl:100p' >
                                 <Image src={linepath} alt="linepath" layout="fill" />
                             </div>
                         </MediaQuery>

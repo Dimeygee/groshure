@@ -227,6 +227,14 @@ option {
   cursor:pointer;
 }
 
+@media screen and (min-width:280px) and (max-width:460px){
+
+    .userpix{
+      margin-top:40px !important;
+    }
+
+}
+
 @media screen and (max-width:280px){
 
   .sm_shopphone span{

@@ -85,10 +85,10 @@ export  default function Steps(){
                             <Image src={two} alt='two' layout="fill" className='opacity-30'/>
                         </div>
                 </div>
-                <MediaQuery  maxWidth={767}>
+                <MediaQuery  maxWidth={540}>
                     <SS_steps />
                 </MediaQuery>
-                <MediaQuery minWidth={767}>
+                <MediaQuery minWidth={541}>
                     <div className='d_hidden_steps hidden md:block xl:block w-[450px] h-[450px]  absolute top-[120px] -left-[100px] 4xl:w-[850px] 4xl:h-[850px] 4xl:-left-[250px] 4xl:top-[10px]'>
                         <Image src={redcircle} alt="redcircle" layout="fill" />
                     </div>

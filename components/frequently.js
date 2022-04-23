@@ -38,7 +38,7 @@ export default function Frequently(){
                 className='hidden md:block xl:block w-[426px] h-[426px]  relative  4xl:w-[800px] 4xl:h-[800px]'>
                     <Image src={frequently} alt='frequently' layout="fill" />
                 </motion.div>
-                <div className=' min-h-1/5 md:flex md:w-[70%]  xl:w-[70%] xl:flex justify-end xl:min-h-1/2'>
+                <div className=' min-h-1/3  md:flex md:w-[70%]  xl:w-[70%] xl:flex justify-end xl:min-h-1/2'>
                     <div className=' xl:w-90 lg:min-h-1/5 xl:min-h-1/2'>
                         <div className='relative h-[70px] xl:h-[100px] md:text-left xl:text-left text-center '>
                             <div className='absolute -top-8  w-120 h-120 -z-0 opacity-30 4xl:w-[200px] 4xl:h-[200px]'>

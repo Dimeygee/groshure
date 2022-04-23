@@ -35,7 +35,7 @@ export default (req , res) => {
 
       sgMail
   .send(msg).then(() => {console.log("status Ok 200")}, error => {
-    console.error(error);
+    alert(error);
 
     if (error.response) {
       console.error(error.response.body)
