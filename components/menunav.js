@@ -9,11 +9,7 @@ import { AnimatePresence, motion } from "framer-motion"
 
 export default function MenuNav (){
 
-    if(true ) {
-        return (
-          <div className='true'>True</div>
-        )
-      }
+    
 
     const menucontext = useContext(MenuContext)
 

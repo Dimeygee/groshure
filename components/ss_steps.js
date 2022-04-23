@@ -34,7 +34,7 @@ export default function SS_steps (){
             initial="hidden"
             whileInView="visible"
             variants={element}
-            className='h-[626px] relative overflow-y-hidden bg-[#A3D32A]'>
+            className='h-[626px] relative overflow-y-hidden bg-[#A3D32A] rounded-[25px]'>
                 <div className='relative w-100p h-100p'>
                     <Image src={green} alt='green' layout="fill"  />
                 </div>
@@ -57,7 +57,7 @@ export default function SS_steps (){
              initial="hidden"
              whileInView="visible"
              variants={element}
-             className='h-[626px] relative overflow-y-hidden bg-[#FD4C5C]'>
+             className='h-[626px] relative overflow-y-hidden bg-[#FD4C5C] rounded-[25px]'>
                 <div className='relative w-100p h-100p '>
                     <Image src={red} alt='red' layout="fill"  />
                 </div>
@@ -80,7 +80,7 @@ export default function SS_steps (){
              initial="hidden"
              whileInView="visible"
              variants={element}
-            className='h-[626px] relative overflow-y-hidden bg-[#000000]'>
+            className='h-[626px] relative overflow-y-hidden bg-[#000000] rounded-[25px]'>
                 <div className='relative w-100p h-100p '>
                     <Image src={black} alt='black' layout="fill"  />
                 </div>
@@ -103,7 +103,7 @@ export default function SS_steps (){
              initial="hidden"
             whileInView="visible"
             variants={element}
-            className='h-[626px] relative overflow-y-hidden bg-[#FFBB00]'>
+            className='h-[626px] relative overflow-y-hidden bg-[#FFBB00] rounded-[25px]'>
                 <div className='relative w-100p h-100p'>
                     <Image src={yellow} alt='yellow' layout="fill"  />
                 </div>
