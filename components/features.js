@@ -69,7 +69,7 @@ export default function Features() {
                         delay: 0.5
                     }}}
                     className='relative w-100p h-100p hidden md:block'>
-                        <Image src={pizza} alt='pizza' layout="fill" quality={90}  />
+                        <Image src={pizza} alt='pizza' layout="fill" quality={90} priority />
                     </motion.div>
                 </div>
             </div>
@@ -138,7 +138,7 @@ export default function Features() {
                     }}}
 
                     className='relative w-100p h-100p z-0'>
-                        <Image src={rectangle} alt='rectangle' layout="fill" quality={90} />
+                        <Image src={rectangle} alt='rectangle' layout="fill" quality={90} priority />
                     </motion.div>
                 </div>
             </div>
