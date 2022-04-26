@@ -2,7 +2,6 @@ import { wrap } from "popmotion";
 import Image from "next/image"
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react"
-import groshurepac from "../public/groshurepac.svg"
 import { useMediaQuery } from 'react-responsive'
 
 
@@ -112,9 +111,9 @@ export default function HeaderSlider({ headerSlider }) {
                           custom={imageIndex}
                           animate="visible"
                           initial="hidden"
-                          className='relative w-100p h-100p'
+                          className={`relative h-100p ${imageIndex === 2 ? "w-[87%] xl:ml-20" : " w-100p" }`}
                         >
-                            <Image src={headerSlider[imageIndex]} alt={headerSlider[imageIndex]} layout="fill" priority/>
+                            <Image src={headerSlider[imageIndex]} alt={headerSlider[imageIndex]} layout="fill" quality={100} priority/>
                         </motion.div>
                 </motion.div> 
             </AnimatePresence>

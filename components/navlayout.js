@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import logo from "../public/logo.jpg"
+import logo from "../public/logo.png"
 import { useRouter } from 'next/router'
 import { motion, useAnimation } from "framer-motion"
 import { useEffect, useContext } from 'react'
@@ -73,11 +73,11 @@ export default function NavLayout () {
               animate={{ opacity: 1,x: 0,  transition: {
                 delay: 0.6
               } }}
-              className='w-[100px] h-[40px]  relative  xl:w-[105px] xl:h-[45px] 2xl:w-[120px] 2xl:h-[60px]  flex items-center 4xl:w-[270px] 4xl:h-[130px] 3xl:w-[150px] 3xl:h-[70px] md:w-[90px] md:h-[40px]'
+              className='w-[100px] h-[40px]  relative  xl:w-[105px] xl:h-[45px] 2xl:w-[120px] 2xl:h-[60px]  flex items-center 4xl:w-[300px] 4xl:h-[120px] 3xl:w-[150px] 3xl:h-[70px] md:w-[90px] md:h-[40px]'
             >
                <Link href="/">
                 <a>
-                  <Image src={logo} layout='fill' />
+                  <Image src={logo} layout='fill' quality={90}  />
                 </a>
               </Link>
             </motion.div>

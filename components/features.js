@@ -1,7 +1,7 @@
 import Image from "next/image"
-import pizza from "../public/pizza.jpg"
+import pizza from "../public/pizza.png"
 import rectangle from "../public/rectangle.png"
-import two from "../public/two.svg"
+import two from "../public/two.png"
 import grobask from "../public/grobask.png"
 import grodelivery from "../public/grodelivery.png"
 import grotime from "../public/grotime.png"
@@ -62,14 +62,14 @@ export default function Features() {
                         </div> 
                     </motion.div>
                 </div>
-                <div className='md:h-[150px] md:w-[150px] xl:w-[205px] xl:h-[205px] right-0 top-0 4xl:w-[400px] 4xl:h-[400px] 3xl:w-[250px] 3xl:h-[250px]'  >
+                <div className='md:h-[150px] md:w-[150px] xl:w-[205px] xl:h-[205px] right-0 top-0 4xl:w-[450px] 4xl:h-[470px] 3xl:w-[250px] 3xl:h-[250px]'  >
                     <motion.div
                     initial={{ x: 100 }}
                     whileInView={{ x:0 , transition: {
                         delay: 0.5
                     }}}
                     className='relative w-100p h-100p hidden md:block'>
-                        <Image src={pizza} alt='pizza' layout="fill"  />
+                        <Image src={pizza} alt='pizza' layout="fill" quality={90}  />
                     </motion.div>
                 </div>
             </div>
@@ -130,7 +130,7 @@ export default function Features() {
                 </motion.div>
             </div>
             <div >
-                <div className='hidden md:block md:h-[150px] md:w-[150px] xl:w-[230px] xl:h-[240px] left-0 bottom-0 4xl:w-[500px] 4xl:h-[500px] 3xl:w-[250px] 3xl:h-[250px] '>
+                <div className='hidden md:block md:h-[150px] md:w-[150px] xl:w-[230px] xl:h-[240px] left-0 bottom-0 4xl:w-[550px] 4xl:h-[550px] 3xl:w-[320px] 3xl:h-[320px] '>
                     <motion.div
                     initial={{ x: -100 }}
                     whileInView={{ x:0 , transition: {
@@ -138,7 +138,7 @@ export default function Features() {
                     }}}
 
                     className='relative w-100p h-100p z-0'>
-                        <Image src={rectangle} alt='rectangle' layout="fill"  />
+                        <Image src={rectangle} alt='rectangle' layout="fill" quality={90} />
                     </motion.div>
                 </div>
             </div>

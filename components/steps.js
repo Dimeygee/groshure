@@ -1,9 +1,9 @@
-import two from "../public/two.svg"
+import two from "../public/two.png"
 import Image from "next/image"
 import yellowblack from "../public/yellowblack.svg"
 import redcircle from "../public/redcircle.svg"
 import greencircle from "../public/greencircle.svg"
-import secpframe from "../public/secpframe.svg"
+import secpframe from "../public/secpframe.png"
 import MediaQuery from "react-responsive"
 import { motion } from "framer-motion"
 import SS_steps from "./ss_steps"
@@ -14,22 +14,22 @@ import howcheckout from "../public/howcheckout.png"
  
 
 let desktopGreenImage = {
-    backgroundImage: "url('https://res.cloudinary.com/dimejiscloud/image/upload/v1648070429/desktopgreen_eo2jxp.png')",
+    backgroundImage: "url('https://res.cloudinary.com/dimejiscloud/image/upload/q_auto:best/v1650921461/Frame_25_ckhso9.png')",
     backgroundColor:"#A3D32A",
 }
 
 let  desktopRedImage = {
-    backgroundImage : "url('https://res.cloudinary.com/dimejiscloud/image/upload/v1648070429/desktopred_qr7tei.png')",
+    backgroundImage : "url('https://res.cloudinary.com/dimejiscloud/image/upload/q_auto:best/v1650921461/Frame_26_p1v5on.png')",
     backgroundColor:"#FD4C5C",
 }
 
 let desktopBlackImage = {
-    backgroundImage : "url( 'https://res.cloudinary.com/dimejiscloud/image/upload/v1648070429/desktopblack_hgravu.png')",
+    backgroundImage : "url( 'https://res.cloudinary.com/dimejiscloud/image/upload/q_auto:best/v1650921464/Frame_27_c234eq.png')",
     backgroundColor:"#000000",
 }
 
 let desktopYellowImage = {
-    backgroundImage : "url( 'https://res.cloudinary.com/dimejiscloud/image/upload/v1648070429/desktopyellow_wle8vp.png')",
+    backgroundImage : "url( 'https://res.cloudinary.com/dimejiscloud/image/upload/q_auto:best/v1650921464/Frame_29_qhk9op.png')",
     backgroundColor:"#FFBB00",
 }
 
@@ -73,7 +73,7 @@ export  default function Steps(){
     
     return(
         <div className='min-h-1/5'>
-             <div className='mx-auto xl:my-auto min-h-1/5 w-85 md:w-[75%] xl:w-[78%] 2xl:w-[80%] 3xl:w-[75%] py-[200px] md:py-[80px] relative 4xl:w-[66%]'>
+             <div className='mx-auto xl:my-auto min-h-1/5 w-85 md:w-[75%] xl:w-[78%] 2xl:w-[75%] 3xl:w-[70%] py-[200px] md:py-[80px] relative 4xl:w-[66%]'>
                 <div className='flex justify-center relative h-[200px] xl:h-[100px] md:h-[100px] lg:h-[150px]'>
                         <div className='inline-block text-center absolute z-10'>
                             <div >
@@ -117,7 +117,7 @@ export  default function Steps(){
                             </div>
                             <div className='w-[50%] h-[100%] flex items-end justify-center'>
                                 <div className=' w-[230px] h-[95%] relative 4xl:w-[560px] 2xl:w-[300px]'>
-                                    <Image src={howlogin} alt="howlogin"  layout="fill"  />
+                                    <Image src={howlogin} alt="howlogin"  layout="fill" quality={85}  />
                                 </div>
                             </div>
                         </motion.div>
@@ -139,10 +139,10 @@ export  default function Steps(){
                             <div className='h-[55%] w-[100%] flex justify-center  4xl:h-[60%]'>
                                 <div className='groceries relative 2xl:block 2xl:h-[100%] w-[220px] 4xl:w-[620px] 4xl:h-[100%] 2xl:w-[300px] oveflow-hidden'>
                                     <MediaQuery minWidth={2000}>
-                                            <Image src={secpframe} alt="howgroceries" layout="responsive"  />
+                                            <Image src={secpframe} alt="howgroceries" layout="responsive" quality={85}  />
                                     </MediaQuery>
                                     <MediaQuery maxWidth={2000}>
-                                        <Image src={secpframe} alt="howgroceries" layout="responsive"  />
+                                        <Image src={secpframe} alt="howgroceries" layout="responsive"  quality={85} />
                                     </MediaQuery>
                                 </div>
                             </div>
@@ -164,10 +164,10 @@ export  default function Steps(){
                             <div className='h-[55%] w-[100%] flex justify-center  4xl:h-[60%]'>
                                 <div className='groceries relative 2xl:block 2xl:h-[100%] w-[220px] 4xl:w-[620px] 4xl:h-[100%] 2xl:w-[300px] oveflow-hidden'>
                                     <MediaQuery minWidth={2000}>
-                                            <Image src={howgroceries} alt="howgroceries" layout="responsive"  />
+                                            <Image src={howgroceries} alt="howgroceries" layout="responsive"  quality={85} />
                                     </MediaQuery>
                                     <MediaQuery maxWidth={2000}>
-                                        <Image src={howgroceries} alt="howgroceries" layout="responsive"  />
+                                        <Image src={howgroceries} alt="howgroceries" layout="responsive" quality={85} />
                                     </MediaQuery>
                                 </div>
                             </div>
@@ -191,7 +191,7 @@ export  default function Steps(){
                             </div>
                             <div className='w-[50%] h-[100%] flex items-end justify-center'>
                                 <div className=' w-[230px] h-[95%] relative 4xl:w-[560px] 2xl:w-[300px]'>
-                                    <Image src={howcheckout} alt="howcheckout"  layout="fill"  />
+                                    <Image src={howcheckout} alt="howcheckout"  layout="fill" quality={90}  />
                                 </div>
                             </div>
                         </motion.div>

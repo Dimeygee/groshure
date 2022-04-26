@@ -1,6 +1,6 @@
 import Image from "next/image"
-import frequently from "../public/frequently.svg"
-import two from "../public/two.svg"
+import frequently from "../public/frequently.png"
+import two from "../public/two.png"
 import Accordion from "./accordion"
 import useSWR from "swr"
 import { useState } from "react"
@@ -36,13 +36,13 @@ export default function Frequently(){
                     duration: 0.3
                 }}}
                 className='hidden md:block xl:block w-[426px] h-[426px]  relative  4xl:w-[800px] 4xl:h-[800px]'>
-                    <Image src={frequently} alt='frequently' layout="fill" />
+                    <Image src={frequently} alt='frequently' layout="fill" quality={90} />
                 </motion.div>
                 <div className=' min-h-1/3  md:flex md:w-[70%]  xl:w-[70%] xl:flex justify-end xl:min-h-1/2'>
                     <div className=' xl:w-90 lg:min-h-1/5 xl:min-h-1/2'>
                         <div className='relative h-[70px] xl:h-[100px] md:text-left xl:text-left text-center '>
                             <div className='absolute -top-8  w-120 h-120 -z-0 opacity-30 4xl:w-[200px] 4xl:h-[200px]'>
-                                <Image src={two} layout='fill' alt='two' />
+                                <Image src={two} layout='fill' alt='two' quality={90}  />
                             </div>
                             <p className='md:text-36 xl:text-48 text-32 font-[Righteous] absolute 4xl:text-[120px] 2xl:text-[54px] 3xl:text-60'><span className='text-groshure-red z-10 4xl:text-[120px] 2xl:text-[54px] 3xl:text-60'>Frequently</span> Asked Questions</p>
                         </div>

@@ -2,10 +2,9 @@ import cofounder from "../public/cofounder.png"
 import cofounder2 from "../public/cofounder2.png"
 import fruits1 from "../public/fruits1.png"
 import fruits2 from "../public/fruits2.png"
-import fruits3 from "../public/fruits3.svg"
+import fruits3 from "../public/fruits3.png"
 import mobilefruits2 from "../public/mobilefruits2.png"
 import mobilefruits from "../public/mobilefruits.png"
-import mobilefruits3 from "../public/mobilefruits3.png"
 
 
 export const imageSlider = [{
@@ -28,4 +27,4 @@ export const imageSlider = [{
 
 export const headerSlider = [fruits1, fruits2, fruits3]
 
-export const mobileHeaderImages = [mobilefruits, mobilefruits2, mobilefruits3]
+export const mobileHeaderImages = [mobilefruits, mobilefruits2, fruits3]

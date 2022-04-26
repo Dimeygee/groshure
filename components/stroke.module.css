@@ -3,10 +3,10 @@
 .stroke{
     color: #FD4C5C;
     text-fill-color:#FD4C5C;
-    text-stroke-width: 4px;
+    text-stroke-width: 3px;
     text-stroke-color:white;
     -webkit-text-fill-color: #FD4C5C; 
-    -webkit-text-stroke-width: 4px;
+    -webkit-text-stroke-width: 3px;
     -webkit-text-stroke-color: white;
 }
 

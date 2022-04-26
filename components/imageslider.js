@@ -80,7 +80,7 @@ export default function ImageSlider({imageSlider}){
                         whileInView={{ opacity: 1, x : 0 , transition: {
                             delay: 0.3
                         }}}
-                        className='order-1 sm:order-1 md:order-2  md:text-left text-center md:mt-0 mt-10 font-[circularstd] md:w-[60%]  lg:pl-20 lg:pr-10 4xl:pl-64 '>
+                        className='order-1 sm:order-1 md:order-2  md:text-left text-center md:mt-0 mt-10 font-[circularstd] md:w-[60%]  lg:pl-28 lg:pr-10 4xl:pl-64 '>
                            <div className='flex'>
                               <div className="xl:leading-[35px] 3xl:leading-[45px] 4xl:leading-[95px]">
                                 <h4 className='text-24 text-[#141414] font-bold 4xl:text-60 2xl:text-30 3xl:text-32'>{imageSlider[imageIndex].feedback}</h4>
@@ -90,10 +90,10 @@ export default function ImageSlider({imageSlider}){
                            </div>
                            <div className='flex py-7 md:py-7 4xl:mt-20 justify-center md:justify-start'>
                              <div className='relative w-[20px] h-[20px] mr-7 2xl:w-[25px] 2xl:h-[25px] 4xl:w-[60px] 4xl:h-[60px]'>
-                               <Image src={facebook} layout='fill' alt="facebook" />
+                               <Image src={facebook} layout='fill' alt="facebook" quality={90} />
                              </div>
                              <div className='relative w-[20px] h-[20px] 2xl:w-[25px] 2xl:h-[25px] 4xl:w-[60px] 4xl:h-[60px]'>
-                               <Image src={twitter} layout='fill' alt="twitter" />
+                               <Image src={twitter} layout='fill' alt="twitter" quality={90} />
                              </div>
                            </div>
                         </motion.div>
@@ -104,7 +104,7 @@ export default function ImageSlider({imageSlider}){
                         }}}
                         className='sm:order-1 md:order-1 flex justify-center items-center md:mt-0 mt-5'>
                             <div className='relative border-white border-[10px] md:border-x-[20px] md:w-[260px] md:h-[240px] w-[250px] h-[250px] z-10 rounded-full 4xl:w-[670px] 4xl:h-[670px] 4xl:border-x-[45px] md:mb-20 2xl:w-[300px] 2xl:h-[300px] 3xl:w-[320px] 3xl:[320px]'>
-                                <Image src={ imageSlider[imageIndex].images[1] }  alt="image" layout="fill"  />
+                                <Image src={ imageSlider[imageIndex].images[1] }  alt="image" layout="fill"  quality={90} />
                             </div>
                         </motion.div>
                         <div className='userpix mt-10 xs:mt-0 md:mt-0 order-3 flex md:flex-col justify-evenly md:py-5 md:pb-20  md:order-3'>
@@ -114,7 +114,7 @@ export default function ImageSlider({imageSlider}){
                                    delay: 0.3
                                }}}
                               className='relative w-[80px] h-[80px] border-[3px] border-[#FD4C5C] rounded-full cursor-pointer 2xl:w-[90px] 2xl:h-[90px] 3xl:w-[100px] 3xl:h-[100px] 4xl:w-[210px] 4xl:h-[210px]' onClick={() => paginate(1)}>
-                                <Image  src={imageSlider[imageIndex].images[1]} alt='cofounder' layout='fill' />
+                                <Image  src={imageSlider[imageIndex].images[1]} alt='cofounder' layout='fill' quality={90} />
                               </motion.div>
                               <motion.div 
                               initial={{ opacity: 0, y: 100 }}
@@ -122,7 +122,7 @@ export default function ImageSlider({imageSlider}){
                                   delay: 0.3
                               }}}
                               className='relative w-[80px] h-[80px] rounded-full cursor-pointer 3xl:w-[100px] 3xl:h-[100px] 4xl:w-[210px] 4xl:h-[210px]' onClick={() => paginate(-1)}>
-                                <Image  src={imageSlider[imageIndex].images[0]} alt='cofounder' layout='fill' />
+                                <Image  src={imageSlider[imageIndex].images[0]} alt='cofounder' layout='fill' quality={90} />
                               </motion.div>
                             </div>
                     </div>

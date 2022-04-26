@@ -41,7 +41,7 @@ const container = {
 export default function MobileHeader () {
 
   const style={ 
-    backgroundImage: "url('https://res.cloudinary.com/dimejiscloud/image/upload/c_scale,h_2336,w_1000/v1648070370/herogreen_cjtuel.png')",
+    backgroundImage: "url('https://res.cloudinary.com/dimejiscloud/image/upload/q_auto:best/v1650921454/herocontainermobile_bgfwj8.png')",
     backgroundRepeat:"no-repeat",
     backgroundPosition:"center",
     backgroundSize:"cover",

@@ -1,6 +1,6 @@
 import { useContext , useState } from "react"
 import { MenuContext } from "./context" 
-import logo from "../public/logo.jpg"
+import logo from "../public/logo.png"
 import Image from "next/image"
 import Link from "next/link"
 import { useRouter } from 'next/router'
@@ -49,8 +49,8 @@ export default function MenuNav (){
                         exit={{ opacity: 0, y:10 }}
                         className='bg-white w-[93%]  rounded-[25px] my-3 relative mx-auto'>
                             <div className='flex px-5 py-3 items-center justify-between'>
-                                <div>
-                                    <Image src={logo} alt="logo"  />
+                                <div className="w-[100px] h-[40px] ">
+                                    <Image src={logo} alt="logo" quality={85} />
                                 </div>
                                 <div className='w-[40px] h-[40px] rounded-full flex justify-center items-center flex-col bg-[#F6F6F6]' onClick={handleClick}>
                                     <div className='border-[1px] border-black w-[14px] rotate-45 '></div>

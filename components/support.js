@@ -1,5 +1,5 @@
 import Image from "next/image"
-import two from "../public/two.svg"
+import two from "../public/two.png"
 import Button from "./button"
 import MediaQuery from "react-responsive"
 import MobileButton from "./mobilebutton"
@@ -43,7 +43,7 @@ export default function Support() {
                         </div>
                     </div>
                     <div className='absolute w-120 h-120  xs:right-0  md:right-[25%] xl:right-[35%] 2xl:right-[37%] -top-10 -z-0 4xl:right-[40%] 4xl:w-[200px] 4xl:h-[200px]' >
-                        <Image src={two} alt='two' layout="fill" className='opacity-30'/>
+                        <Image src={two} alt='two' layout="fill" className='opacity-30' quality={85}/>
                     </div>
             </div>
             <div className='mt-20 border-white border-2 '>
@@ -55,15 +55,17 @@ export default function Support() {
                         } }}
                         className=' font-[circularstd] md:flex flex-col'>
                             <div className='flex md:justify-start justify-center'>
-                                <div className=' flex  p-[10px] rounded-full  justify-center shadow-bfs xl:mr-4 mx-auto md:mx-0  4xl:p-[20px]'>
-                                    <div className=' w-[70px] h-[70px] relative 4xl:w-[155px] 4xl:h-[155px]'>
-                                        <Image src={store} alt='store' layout="fill" />
+                                <div className="p-[15px] rounded-[100%] shadow-bfs">
+                                    <div className=' flex  md:mx-0  4xl:p-[20px]'>
+                                        <div className='relative w-[65px] h-[65px] block 4xl:w-[155px] 4xl:h-[155px]'>
+                                            <Image src={store} alt='store' layout="fill" quality={100} objectFit="contain" />
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div className='py-6 4xl:py-12'>
                                 <h4 className='font-medium text-18 leading-5 mb-2 4xl:text-46 4xl:mb-10 2xl:text-[24px] 3xl:text-27'>Are you a Local Grocery Store?</h4>
-                                <p className='text-sm text-[#718096] 4xl:text-42 2xl:text-[18px] 3xl:text-22 md:pr-12'>If you are a local grocery store and would like to partner with us, please click on the button below and fill out the information</p>
+                                <p className='text-sm text-[#718096] 4xl:text-42 2xl:text-[18px] 3xl:text-22 lg:pr-12'>If you are a local grocery store and would like to partner with us, please click on the button below and fill out the information</p>
                             </div>
                             <MediaQuery maxWidth={2000}>
                                 <div >
@@ -96,13 +98,13 @@ export default function Support() {
                             <div className='flex md:justify-start justify-center'>
                                 <div className=' flex  p-[10px] rounded-full  justify-center shadow-bfs xl:mr-4 mx-auto md:mx-0  4xl:p-[20px]'>
                                     <div className=' w-[70px] h-[70px] relative 4xl:w-[155px] 4xl:h-[155px]'>
-                                        <Image src={shopper} alt='shopper'  layout="fill" />
+                                        <Image src={shopper} alt='shopper'  layout="fill" quality={85} />
                                     </div>
                                 </div>
                             </div>
                             <div className='py-6 4xl:py-12'>
                                 <h4 className='font-medium text-18 leading-5 mb-2 4xl:text-46 4xl:mb-10 2xl:text-[24px] 3xl:text-27' >Do you want to be a shopper?</h4>
-                                <p className='text-sm text-[#718096] 4xl:text-42 2xl:text-18 3xl:text-22 md:pr-12'>If you'd like to join our team and work with us by becoming a shopper, please click on the button below and fill out the information.</p>
+                                <p className='text-sm text-[#718096] 4xl:text-42 2xl:text-18 3xl:text-22 lg:pr-12'>If you'd like to join our team and work with us by becoming a shopper, please click on the button below and fill out the information.</p>
                             </div>
                             <MediaQuery maxWidth={2000}>
                                 <div >
@@ -135,7 +137,7 @@ export default function Support() {
                             <div className='flex md:justify-start justify-center'>
                                 <div className=' flex  p-[10px] rounded-full  justify-center shadow-bfs xl:mr-4 mx-auto md:mx-0  4xl:p-[20px]'>
                                     <div className=' w-[70px] h-[70px] relative 4xl:w-[155px] 4xl:h-[155px]'>
-                                        <Image src={investor} alt='investor' layout="fill" />
+                                        <Image src={investor} alt='investor' layout="fill" quality={85} />
                                     </div>
                                 </div>
                             </div>

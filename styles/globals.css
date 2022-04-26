@@ -26,6 +26,8 @@ a {
   text-decoration: none;
 }
 
+
+
 .ss_step{
   display:none;
 } 
@@ -326,7 +328,7 @@ option {
   }
 
   #span4, #span5{
-    min-height:550px;
+    min-height:500px;
   }
 
   .dot.active{

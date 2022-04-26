@@ -1,5 +1,5 @@
 
-import logo from "../public/logo.jpg"
+import logo from "../public/logo.png"
 import Image from "next/image"
 import { useRouter } from "next/router"
 import MediaQuery from "react-responsive"
@@ -74,7 +74,7 @@ export default function Footer() {
                     className='w-90 mx-auto flex justify-between md:flex-row flex-col'>
                     <div className='flex items-center md:flex-row flex-col'>
                         <div className='md:w-[100px] md:h-[40px]  4xl:w-[300px] 4xl:h-[120px] relative w-[100px] h-[40px] 4xl:mb-0 md:mb-0 mb-[20px] 2xl:w-[120px] 2xl:h-[60px] 3xl:w-[150px] 3xl:h-[70px]'>
-                            <Image className='absolute' src={logo}  alt="logo" layout="fill" />
+                            <Image className='absolute' src={logo}  alt="logo" layout="fill" quality={90} />
                         </div>
                         <p className='text-[#616161] text-sm md:ml-3 md:text-left text-center 4xl:text-42 2xl:text-18 3xl:text-22'>© Copyright 2018 Pixsellz - Instant Groceries shopping to your doorstep.</p>
                     </div>

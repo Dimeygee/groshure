@@ -17,7 +17,7 @@ import DesktopWaitList from "../components/d_waitlist"
 
 
 let style={ 
-  backgroundImage: "url('https://res.cloudinary.com/dimejiscloud/image/upload/q_99/v1648070370/herocontainer_gxomuu.png')",
+  backgroundImage: "url('https://res.cloudinary.com/dimejiscloud/image/upload/q_auto:best/v1650921466/herocontainerdesktop_t23rry.png')",
   backgroundRepeat:"no-repeat",
   backgroundPosition:"center",
   backgroundSize:"cover",
@@ -95,7 +95,7 @@ export default function Home() {
             style={style}
             className='header min-h-[350px] md:min-h-[400px] 2xl:min-h-[550px] 3xl:min-h-[650px] xl:min-h-[480px] w-[100%] relative overflow-hidden rounded-[25px] 4xl:rounded-[50px] mt-10 3xl:mt-20 4xl:min-h-[70vh] flex'
             >
-             <div className='z-10 md:flex  xl:relative md:w-[55%] lg:w-[50%] xl:w-[60%] 4xl:w-[70%] 4xl:pl-28 py-20 4xl:py-40 3xl:pl-12 pl-7 4xl:flex flex-col justify-evenly md:py-10 xl:py-10  xl:flex 3xl:py-20'>
+             <div className='z-10 md:flex  xl:relative md:w-[55%] lg:w-[50%] xl:w-[60%] 4xl:w-[55%] 4xl:pl-28 py-20 4xl:py-40 3xl:pl-12 pl-7 4xl:flex flex-col justify-evenly md:py-10 xl:py-10  xl:flex 3xl:py-20'>
               <motion.div
               custom={1}
               variants={items}
@@ -108,7 +108,7 @@ export default function Home() {
                 <DesktopWaitList />
                </motion.div>
             </div>
-            <div className='w-[50%] md:w-[45%] lg:w-[50%] xl:w-[50%]  relative  hidden md:block'>
+            <div className='w-[50%] md:w-[45%] lg:w-[50%] xl:w-[50%] 4xl:w-[45%]  relative  hidden md:block'>
             <HeaderSlider headerSlider={headerSlider} />
             </div>
         </motion.div>
@@ -121,9 +121,9 @@ export default function Home() {
                 viewport={{ once: true }}
                 className='flex items-center flex-col  xl:flex-row '>
                 <div className='mb-4 xl:mb-0'>
-                  <div className=' flex p-[15px] rounded-full  justify-center shadow-bfs xl:mr-4 mx-auto xl:mx-0 4xl:p-[14px]'>
-                      <div className='w-[45px] h-[45px] relative 4xl:w-[120px] 4xl:h-[120px]'>
-                        <Image src={bask} alt='bask'  priority layout="fill"/>
+                  <div className=' flex p-[10px] rounded-full  justify-center shadow-bfs xl:mr-4 mx-auto xl:mx-0 4xl:p-[14px]'>
+                      <div className='w-[40px] h-[40px] relative 4xl:w-[120px] 4xl:h-[120px]'>
+                        <Image src={bask} alt='bask'  priority layout="fill" quality={100} />
                       </div>
                     </div>
                 </div>
@@ -139,8 +139,8 @@ export default function Home() {
                 viewport={{ once: true }}
                 className='flex items-center flex-col xl:flex-row '>
                 <div className='mb-4 xl:mb-0 '>
-                  <div className=' flex  p-[15px] rounded-full  justify-center shadow-bfs xl:mr-4 mx-auto xl:mx-0 4xl:p-[14px]'>
-                      <div className=' w-[45px] h-[45px] relative 4xl:w-[120px] 4xl:h-[120px]'>
+                  <div className=' flex  p-[10px] rounded-full  justify-center shadow-bfs xl:mr-4 mx-auto xl:mx-0 4xl:p-[14px]'>
+                      <div className=' w-[40px] h-[40px] relative 4xl:w-[120px] 4xl:h-[120px]'>
                         <Image src={bike} alt='bike'  priority layout="fill"/>
                       </div>
                     </div>
@@ -157,8 +157,8 @@ export default function Home() {
                 viewport={{ once: true }}
                 className='flex items-center flex-col xl:flex-row '>
                 <div className='mb-4 xl:mb-0 '>
-                  <div className=' flex  p-[15px] rounded-full  justify-center shadow-bfs xl:mr-4 mx-auto xl:mx-0 4xl:p-[14px]'>
-                      <div className='w-[45px] h-[45px] relative 4xl:w-[120px] 4xl:h-[120px]'>
+                  <div className=' flex  p-[10px] rounded-full  justify-center shadow-bfs xl:mr-4 mx-auto xl:mx-0 4xl:p-[14px]'>
+                      <div className='w-[40px] h-[40px] relative 4xl:w-[120px] 4xl:h-[120px]'>
                         <Image src={item} alt='item' priority layout="fill"/>
                       </div>
                     </div>

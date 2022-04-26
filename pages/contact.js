@@ -125,12 +125,12 @@ export default function Contact(){
                     <div className='h-387 w-387 relative 4xl:w-[1000px] 4xl:h-[1200px]  3xl:w-[70%] 3xl:h-[60vh] 2xl:w-[70%] 2xl:h-[60vh]'>
                         <MediaQuery maxWidth={540}>
                             <div className=' relative w-100p h-100p  md:w-[80%]  xl:w-100p xl:h-100p '>
-                                <Image src={linepath1x} alt="linepath1x" layout="fill" />
+                                <Image src={linepath1x} alt="linepath1x" layout="fill" quality={90} />
                             </div>
                         </MediaQuery>
                         <MediaQuery minWidth={541}>
                             <div className='relative w-100p h-100p md:w-[80%]  xl:w-100p xl:h-100p 3xl:w-100p 3xl:100p 2xl:w-100p 2xl:100p' >
-                                <Image src={linepath} alt="linepath" layout="fill" />
+                                <Image src={linepath} alt="linepath" layout="fill" quality={90} />
                             </div>
                         </MediaQuery>
                         <span className='flex flex-col items-center absolute md:left-8 lg:-left-8 md:top-3 left-20 top-1'>
@@ -141,7 +141,7 @@ export default function Contact(){
                              }}}
                             className='p-2 flex top-4 bg-white w-[72px] h-[72px] rounded-full items-center justify-center  shadow-bfs 4xl:w-[200px] 4xl:h-[200px] 3xl:w-[100px] 3xl:h-[100px] 2xl:w-[80px] 2xl:h-[80px]'>
                                 <span className='relative  inline-block  w-[27px] h-[27px] 4xl:w-[67px] 4xl:h-[67px] 3xl:w-[40px] 3xl:h-[40px] 2xl:w-[40px] 2xl:h-[40px]'>
-                                    <Image src={phone} alt="phone" layout="fill"/>
+                                    <Image src={phone} alt="phone" layout="fill" quality={90}/>
                                 </span>
                             </motion.span>
                             <motion.div
@@ -162,7 +162,7 @@ export default function Contact(){
                         className=' flex flex-col items-center absolute xl:-right-[60px] top-[38%] right-6'>
                             <span className='p-2 flex bg-white w-[72px] h-[72px] rounded-full items-center justify-center shadow-bfs 4xl:w-[200px] 4xl:h-[200px] 3xl:w-[100px] 3xl:h-[100px] 2xl:w-[80px] 2xl:h-[80px]'>
                                 <span className='relative  inline-block  w-[27px] h-[27px] 4xl:w-[67px] 4xl:h-[67px] 3xl:w-[40px] 3xl:h-[40px] 2xl:w-[40px] 2xl:h-[40px]'>
-                                    <Image src={message} alt="message" layout="fill"/>
+                                    <Image src={message} alt="message" layout="fill" quality={90}/>
                                 </span>
                             </span>
                             <motion.div
@@ -183,7 +183,7 @@ export default function Contact(){
                         className='flex flex-col items-center absolute md:-bottom-[120px] md:left-[15%] -bottom-[100px] left-[25%] '>
                             <span className='p-2 flex bg-white w-[72px] h-[72px] rounded-full items-center justify-center  shadow-bfs 4xl:w-[200px] 4xl:h-[200px] 3xl:w-[100px] 3xl:h-[100px] 2xl:w-[80px] 2xl:h-[80px]'>
                                 <span className='relative  inline-block  w-[27px] h-[27px] 4xl:w-[67px] 4xl:h-[67px] 3xl:w-[40px] 3xl:h-[40px] 2xl:w-[40px] 2xl:h-[40px]'>
-                                    <Image src={location} alt="location" layout="fill"/>
+                                    <Image src={location} alt="location" layout="fill" quality={90}/>
                                 </span>
                             </span>
                             <motion.div
