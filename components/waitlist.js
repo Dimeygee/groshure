@@ -52,12 +52,12 @@ export default function WaitList({ width, boxShadow }) {
             width:width
         }} className={`flex justify-between 3xl:rounded-[70px]  p-1 min-h-[50px]`}>
             <MessageAlert msg={msg} color={color} /> 
-              <div className='flex grow'>
+              <div className='block md:flex grow'>
                <form onSubmit={handleSubmit} >
                   <input style={{ border: "none" , outline: "none"}} className='waitlistform
                     py-3 px-3 xs:w-100p 3xl:pl-12 rounded-full w-[60%]' type='text' placeholder="Enter email address"  value={ waitlist } onChange={(e) => joinWaitlist(e.target.value)} />
                   <Button>Join waitlist</Button>
-                  <MobileButton width="75%" paddingBottom="13px" paddingTop="13px"  backgroundColor="#FD4C5C" color='white' borderRadius="25px" fontSize={"14px"} marginTop="27px" >Join waitlist</MobileButton>
+                  <MobileButton width="70%" paddingBottom="13px" paddingTop="13px"  backgroundColor="#FD4C5C" color='white' borderRadius="25px" fontSize={"14px"} marginTop="27px" >Join waitlist</MobileButton>
                </form>
               </div>
         </div>
