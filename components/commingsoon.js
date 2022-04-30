@@ -80,7 +80,7 @@ export default function ComingSoon(){
                    initial="hidden"
                    whileInView="visible"
                    className='md:w-[45%] xl:w-[50%] lg:w-[40%] flex justify-center flex-col md:pr-6  text-center md:text-left'>
-                    <div className='md:w-[100%] xl:w-[480px]  md:px-0 lg:pr-8 4xl:px-0 4xl:w-[80%] 3xl:w-85 2xl:w-85 px-20'>
+                    <div className='md:w-[100%] xl:w-[480px]  md:px-0 lg:pr-8 4xl:px-0 4xl:w-[80%] 3xl:w-85 2xl:w-85 px-5'>
                         <div className='relative md:w-[300px]  h-[50px] flex items-center text-center'>
                             <small className='absolute text-groshure-red font-medium xl:text-20 leading-3 text-center md:text-left w-[100%] block md:inline 4xl:text-46 2xl:text-[24px] 3xl:text-26'>Coming soon</small>
                             <div className='w-120 h-120 absolute -z-0 md:right-[40%] right-[30%] -top-10 4xl:w-[200px] 4xl:h-[200px]'>
@@ -98,14 +98,15 @@ export default function ComingSoon(){
                             </div>
                             <button className='hidden md:inline-block md:w-[50%] lg:w-[45%]  bg-groshure-red text-white rounded-[50px] 4xl:rounded-[150px]'>Join waitlist</button>
                             </div>
-                        </form> 
-                        <MediaQuery maxWidth={540}>
-                                <div className='mt-3'>
+                            <MediaQuery maxWidth={540}>
+                                <div className='mt-5'>
                                     <MobileButton backgroundColor="#FD4C5C" color="white" paddingTop={'10px'} paddingBottom={'10px'} width='70%' borderRadius='30px' fontSize={"18px"}>
                                         Join waitlist
                                     </MobileButton>
                                 </div>
                             </MediaQuery>
+                        </form> 
+                        
                     </div>
                 </motion.div>
             </div>

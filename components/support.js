@@ -45,7 +45,7 @@ export default function Support() {
                         <Image src={two} alt='two' layout="fill" className='opacity-30' quality={85}/>
                     </div>
             </div>
-            <div className='mt-20 border-white border-2 '>
+            <div className='mt-12 mt:mt-20'>
             <div className='mt-[53px] xl:mt-[30px] md:grid-cols-3 md:gap-10 4xl:mt-[290px] grid xl:grid-cols-3 gap-20 xl:gap-10 grid-cols-1 md:text-left text-center 3xl:mt-[110px]'>
                     <motion.div
                         initial={{ opacity: 0, y: 70 }}

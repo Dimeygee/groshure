@@ -40,7 +40,7 @@ export default function Frequently(){
                 </motion.div>
                 <div className=' min-h-1/3  md:flex md:w-[70%]  xl:w-[70%] xl:flex justify-end xl:min-h-1/2'>
                     <div className=' xl:w-90 lg:min-h-1/5 xl:min-h-1/2'>
-                        <div className='relative h-[70px] xl:h-[100px] md:text-left xl:text-left text-center 4xl:mb-48'>
+                        <div className='relative mb-20  md:mb-0 h-[70px] xl:h-[100px] md:text-left xl:text-left text-center 4xl:mb-48'>
                             <div className='absolute -top-8  w-120 h-120 -z-0 opacity-30 4xl:w-[200px] 4xl:h-[200px]'>
                                 <Image src={two} layout='fill' alt='two' quality={90}  />
                             </div>
