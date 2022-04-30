@@ -39,7 +39,6 @@ export default function Support() {
                     <div className='inline-block absolute z-10'>
                         <div>
                             <h3 className='font-[Righteous] text-40 4xl:text-74 2xl:text-46 3xl:text-[54px]'>Support</h3>
-                            <p className='text-[#797B89] text-18 md:w-[400px] xl:w-[400px] mt-3  font-[circularstd] 4xl:text-42 4xl:w-[900px] 2xl:text-[22px] 2xl:w-[500px] 3xl:text-25 3xl:w-[700px]'>This is a big one and i consider it one of the most important things for a designer to get right</p>
                         </div>
                     </div>
                     <div className='absolute w-120 h-120  xs:right-0  md:right-[25%] xl:right-[35%] 2xl:right-[37%] -top-10 -z-0 4xl:right-[40%] 4xl:w-[200px] 4xl:h-[200px]' >
@@ -65,7 +64,7 @@ export default function Support() {
                             </div>
                             <div className='py-6 4xl:py-12'>
                                 <h4 className='font-medium text-18 leading-5 mb-2 4xl:text-46 4xl:mb-10 2xl:text-[24px] 3xl:text-27'>Are you a Local Grocery Store?</h4>
-                                <p className='text-sm text-[#718096] 4xl:text-42 2xl:text-[18px] 3xl:text-22 lg:pr-12'>If you are a local grocery store and would like to partner with us, please click on the button below and fill out the information</p>
+                                <p className='text-sm text-[#718096] 4xl:text-42 2xl:text-[18px] 3xl:text-22 xl:pr-12'>If you are a local grocery store and would like to partner with us, please click on the button below and fill out the information</p>
                             </div>
                             <MediaQuery maxWidth={2000}>
                                 <div >
@@ -104,7 +103,7 @@ export default function Support() {
                             </div>
                             <div className='py-6 4xl:py-12'>
                                 <h4 className='font-medium text-18 leading-5 mb-2 4xl:text-46 4xl:mb-10 2xl:text-[24px] 3xl:text-27' >Do you want to be a shopper?</h4>
-                                <p className='text-sm text-[#718096] 4xl:text-42 2xl:text-18 3xl:text-22 lg:pr-12'>If you'd like to join our team and work with us by becoming a shopper, please click on the button below and fill out the information.</p>
+                                <p className='text-sm text-[#718096] 4xl:text-42 2xl:text-18 3xl:text-22 xl:pr-12'>If you'd like to join our team and work with us by becoming a shopper, please click on the button below and fill out the information.</p>
                             </div>
                             <MediaQuery maxWidth={2000}>
                                 <div >

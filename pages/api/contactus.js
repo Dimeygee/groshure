@@ -1,13 +1,13 @@
-const sgMail = require('@sendgrid/mail');
+import sendgrid from "@sendgrid/mail"
 
-sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+sendgrid.setApiKey(process.env.SENDGRID_API_KEY)
 
-
-export default (req , res) => {
-
-    const body = JSON.parse(req.body);
-
-    const msg = {
+async function sendEmail(req, res){
+    
+  
+  try{
+    await sendgrid.send(
+      {
         to: 'help@groshure.com.au',
         from: 'help@groshure.com.au', 
         subject: 'Groshure Contact Form',
@@ -29,36 +29,36 @@ export default (req , res) => {
                   <p>someone just submitted a form on Groshure. Here's what they had to say</p><br/><br/>
                   <div>
                     <p>Name</p>
-                    <p style="font-weight:bolder;">${body.name}</p>
+                    <p style="font-weight:bolder;">${req.body.name}</p>
                   </div>
                   <br/>
                   <br/>
                   <div>
                     <p>Email</p>
-                    <p style="font-weight:bolder;">${body.email}</p>
+                    <p style="font-weight:bolder;">${req.body.email}</p>
                   </div>
                   <br/>
                   <br/>
                   <div>
                     <p>Messages</p>
-                    <p style="font-weight:bolder;">${body.messages}</p>
+                    <p style="font-weight:bolder;">${req.body.messages}</p>
                   </div>
                   <br/>
                   <br/>
                 </div>
         </body>
         </html>`,
-      };
+      }
+    )
 
-      sgMail
-  .send(msg).then(() => {console.log("status Ok 200")}, error => {
-    console.error(error);
+  }catch(err){
+    console.log(err)
+    return res.status(err.statusCode || 500).json({error: "opps!! something went wrong"})
+  }
 
-    if (error.response) {
-      console.error(error.response.body)
-    }
-  });
-
-      res.status(200).json({ status: "ok" })
+  return res.status(200).json({error : ""})
 
 }
+
+export default sendEmail
+

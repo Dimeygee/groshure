@@ -367,9 +367,17 @@ option {
   font-weight:bold;
 }   
 
+.alert{
+  font-size:36px;
+}
+
 }
 
 @media screen and (min-width:3056px){
+
+  .alert{
+  font-size:46px;
+}
 
   #span3, #span2{
     min-height:1500px;
@@ -406,7 +414,26 @@ option {
 
 }
 
+.alert{
+  position:fixed;
+  transform:translate(-50%,-50%);
+  top:50px;
+  left:50%;
+  color:white;
+  transition:.7s;
+  opacity:0;
+  z-index:999;
+}
 
+.alert.red{
+  opacity:1;
+  background-color:red;
+}
+
+.alert.green{
+  opacity:1;
+  background-color:green;
+}
 
 * {
   box-sizing: border-box;

@@ -11,6 +11,7 @@ import Head from "next/head"
 import ACcontainer from "../components/accontainer"
 import ACmainContainer from "../components/accmaincontainer"
 import { useState} from "react"
+import MessageAlert from "../components/messagealert"
 
 
 
@@ -38,18 +39,39 @@ export default function Contact(){
     const [name, setName ]=useState("")
     const [email, setEmail ]=useState("")
     const [messages, setMessages ]=useState("")
+    const [ msg , setMsg ] = useState("")
+    const [color, setColor] = useState("")
+
 
     async function handleSubmit (e) {
       e.preventDefault()
       
      
 
-      await fetch("/api/contactus",{
+      const res = await fetch("/api/contactus",{
           method:"POST",
-          body:JSON.stringify({name, email, messages})
-      }).then(res => {
-        alert("thank you, we will get back to you soon")
-    }).catch(err => console.log(err))
+          body:JSON.stringify({name:name, email:email,messages: messages}),
+          headers: {
+            "Content-Type": "application/json",
+            }
+      })
+
+      const { error } = await res.json()
+
+        
+       if(error) {
+        setColor("red")
+        setMsg(error )
+        }else {
+        setColor("green")
+        setMsg("succesfull")
+        }
+
+        setTimeout(() => {
+            setMsg("")
+            setColor("")
+        },2000)
+       
 
       setName("")
       setEmail("")
@@ -61,7 +83,6 @@ export default function Contact(){
     return(
         <div className='w-85  mt-7 mx-auto overflow-x-clip'>
             <Head>
-          <link rel="icon" href="" />
           <meta name="" content="" />
           <meta
             name="apple-mobile-web-app-status-bar-style"
@@ -101,11 +122,6 @@ export default function Contact(){
                 animate='visible'
                 variants={element} 
                 className='md:text-60 text-36 4xl:text-[170px] font-[Righteous] text-center  2xl:text-74 3xl:text-[82px]'>Contact <span className='text-groshure-red'>Us</span></motion.div>
-                <motion.p
-                 initial="hidden"
-                 animate='visible'
-                 variants={element} 
-                className='md:w-[500px] text-base mx-auto text-center my-2 font-[circularstd] 2xl:w-[700px] 4xl:text-[52px] 4xl:w-[1500px] 2xl:text-20 3xl:text-24'>An enim nullam tempor sapien gravida donec enimipsum porta justo congue purus pretium ligula rjbrbnrbrj</motion.p>
                 <motion.div
                  initial="hidden"
                  animate='visible'
@@ -121,6 +137,7 @@ export default function Contact(){
                 </motion.div>
             </ACcontainer>
             <ACmainContainer>
+                <MessageAlert msg={msg} color={color} />
             <div className='overflow-x-auto 2xl:overflow-x-clip  md:w-50 min-h-[614px] flex items-center flex-col w-100p font-[circularstd]'>
                     <div className='h-387 w-387 relative 4xl:w-[1000px] 4xl:h-[1200px]  3xl:w-[70%] 3xl:h-[60vh] 2xl:w-[70%] 2xl:h-[60vh]'>
                         <MediaQuery maxWidth={540}>

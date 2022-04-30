@@ -1,6 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion"
 import { MenuContext } from "./context" 
 import { useContext , useState } from "react"
+import MessageAlert from "./messagealert"
 
 
 
@@ -16,6 +17,9 @@ export default function StoreModal(){
     const [ postcode, setPostcode ] = useState("")
     const [ state, setState ] = useState("")
     const [ additionInfo, setAdditionInfo ] = useState("")
+
+    const [ msg , setMsg ] = useState("")
+    const [color, setColor] = useState("")
 
 
     const { isStoreOpen,setStore} =  menucontext
@@ -43,12 +47,37 @@ export default function StoreModal(){
 
         const res = await fetch("/api/grocerystore",{
             method:"POST",
-            body:JSON.stringify({storename, email,phoneNumber, propertyAddress, suburb, postcode,state, additionInfo})
-        }).then(res => {
-            alert("thank you, we will get back to you soon")
-        }).catch(err => console.log(err))
+            body:JSON.stringify({
+                storename:storename, 
+                email:email,
+                phoneNumber:phoneNumber, 
+                propertyAddress:propertyAddress, 
+                suburb:suburb, 
+                postcode:postcode,
+                state:state, 
+                additionInfo:additionInfo}),
+            headers: {
+                "Content-Type": "application/json",
+            }
+        })
 
+        const { error } = await res.json()
+
+        
+       if(error) {
+        setColor("red")
+        setMsg(error )
+        }else {
+        setColor("green")
+        setMsg("succesfull")
+        }
+
+        setTimeout(() => {
+            setMsg("")
+            setColor("")
+        },2000)
        
+      
   
         setStoreName("")
         setEmail("")
@@ -65,6 +94,7 @@ export default function StoreModal(){
  
     return(
         <div className='overlay fixed top-0 bottom-0 right-0 left-0 w-100p bg-[rgba(0,0,0,0.2)] z-50  overflow-y-auto'>
+                <MessageAlert msg={msg} color={color} />
                 <AnimatePresence>
                     <motion.div 
                         initial={{ opacity: 0, y:10 }}

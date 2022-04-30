@@ -69,7 +69,7 @@ export default function Features() {
                         delay: 0.5
                     }}}
                     className='relative w-100p h-100p hidden md:block'>
-                        <Image src={pizza} alt='pizza' layout="fill" quality={90} priority />
+                        <Image src={pizza} alt='pizza' layout="fill" quality={90} priority objectFit="cover"  />
                     </motion.div>
                 </div>
             </div>
@@ -84,8 +84,8 @@ export default function Features() {
                         variants={child}
                         className=' text-center '>
                             <div className='flex justify-center '>
-                                <div className=' flex  p-[10px] rounded-full  justify-center shadow-bfs xl:mr-4 mx-auto xl:mx-0  4xl:p-[20px]'>
-                                    <div className=' w-[70px] h-[70px] relative 4xl:w-[155px] 4xl:h-[155px]'>
+                                <div className=' flex  p-[10px] rounded-full  justify-center shadow-bfs xl:mr-4 mx-auto xl:mx-0 2xl:p-4  4xl:p-[20px]'>
+                                    <div className='w-[70px] h-[70px] 2xl:w-[90px] 2xl:h-[90px] relative 4xl:w-[155px] 4xl:h-[155px]'>
                                         <Image src={grobask} alt='grobask'  priority layout="fill" />
                                     </div>
                                 </div>
@@ -100,8 +100,8 @@ export default function Features() {
                         variants={child}
                         className=' text-center '>
                             <div className='flex justify-center '>
-                                <div className=' flex  p-[10px] rounded-full  justify-center shadow-bfs xl:mr-4 mx-auto xl:mx-0  4xl:p-[20px]'>
-                                    <div className=' w-[70px] h-[70px] relative 4xl:w-[155px] 4xl:h-[155px]'>
+                                <div className=' flex  p-[10px] rounded-full  justify-center shadow-bfs xl:mr-4 mx-auto xl:mx-0 2xl:p-4 4xl:p-[20px]'>
+                                    <div className=' w-[70px] h-[70px]  2xl:w-[90px] 2xl:h-[90px] relative 4xl:w-[155px] 4xl:h-[155px]'>
                                         <Image src={grotime} alt='grotime'  priority layout="fill" />
                                     </div>
                                 </div>
@@ -116,8 +116,8 @@ export default function Features() {
                         variants={child}
                         className=' text-center '>
                             <div className='flex justify-center '>
-                                <div className=' flex  p-[10px] rounded-full  justify-center shadow-bfs xl:mr-4 mx-auto xl:mx-0  4xl:p-[20px]'>
-                                    <div className=' w-[70px] h-[70px] relative 4xl:w-[155px] 4xl:h-[155px]'>
+                                <div className=' flex p-[10px] rounded-full  justify-center shadow-bfs xl:mr-4 mx-auto xl:mx-0 2xl:p-4 4xl:p-[20px]'>
+                                    <div className=' w-[70px] h-[70px] 2xl:w-[90px] 2xl:h-[90px] relative 4xl:w-[155px] 4xl:h-[155px]'>
                                         <Image src={grodelivery} alt='grodelivery'  priority layout="fill" />
                                     </div>
                                 </div>
@@ -138,7 +138,7 @@ export default function Features() {
                     }}}
 
                     className='relative w-100p h-100p z-0'>
-                        <Image src={rectangle} alt='rectangle' layout="fill" quality={90} priority />
+                        <Image src={rectangle} alt='rectangle' layout="fill" quality={90} priority objectFit="cover" />
                     </motion.div>
                 </div>
             </div>

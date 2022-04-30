@@ -50,7 +50,7 @@ export default function MenuNav (){
                         className='bg-white w-[93%]  rounded-[25px] my-3 relative mx-auto'>
                             <div className='flex px-5 py-3 items-center justify-between'>
                                 <div className="w-[100px] h-[40px] ">
-                                    <Image src={logo} alt="logo" quality={85} />
+                                    <Image src={logo} alt="logo" quality={85} objectFit="contain"  />
                                 </div>
                                 <div className='w-[40px] h-[40px] rounded-full flex justify-center items-center flex-col bg-[#F6F6F6]' onClick={handleClick}>
                                     <div className='border-[1px] border-black w-[14px] rotate-45 '></div>

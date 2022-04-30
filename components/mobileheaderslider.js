@@ -88,7 +88,7 @@ export  default  function  MobileHeaderSlider ({mobileHeaderImages}){
                     } }}
                     className="flex justify-center items-center relative w-100p h-100p translate-y-3"
                     >
-                        <Image src={mobileHeaderImages[imageIndex]} alt={mobileHeaderImages[imageIndex]} quality={100} layout="fill" priority />
+                        <Image src={mobileHeaderImages[imageIndex]} alt={mobileHeaderImages[imageIndex]} quality={100} layout="fill" priority   />
                     </motion.div>
             </motion.div> 
         </AnimatePresence>

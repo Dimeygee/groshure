@@ -1,16 +1,14 @@
+import sendgrid from "@sendgrid/mail"
 
-const sgMail = require('@sendgrid/mail');
+sendgrid.setApiKey(process.env.SENDGRID_API_KEY)
 
-sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-
-
-export default (req , res) => {
-
-
-  const body = JSON.parse(req.body);
-
-  const msg = {
-      to: 'help@groshure.com.au',
+async function sendEmail(req, res){
+    
+  
+  try{
+    await sendgrid.send(
+      {
+        to: 'help@groshure.com.au',
       from: 'help@groshure.com.au', 
       subject: "Groshure's store",
       text: 'and easy to do anywhere, even with Node.js',
@@ -31,66 +29,66 @@ export default (req , res) => {
                 <p>someone just submitted a form on Groshure. Here's what they had to say</p><br/><br/>
                 <div>
                   <p>Store Name</p>
-                  <p style="font-weight:bolder;">${body.storename}</p>
+                  <p style="font-weight:bolder;">${req.body.storename}</p>
                 </div>
                 <br/>
                 <br/>
                 <div>
                   <p>Email</p>
-                  <p style="font-weight:bolder;">${body.email}</p>
+                  <p style="font-weight:bolder;">${req.body.email}</p>
                 </div>
                 <br/>
                 <br/>
                 <div>
                   <p>Phone Number</p>
-                  <p style="font-weight:bolder;">${body.phoneNumber}</p>
+                  <p style="font-weight:bolder;">${req.body.phoneNumber}</p>
                 </div>
                 <br/>
                 <br/>
                 <div>
                   <p>Property Address</p>
-                  <p style="font-weight:bolder;">${body.propertyAddress}</p>
+                  <p style="font-weight:bolder;">${req.body.propertyAddress}</p>
                 </div>
                 <br/>
                 <br/>
                 <div>
                   <p>Phone Number</p>
-                  <p style="font-weight:bolder;">${body.suburb}</p>
+                  <p style="font-weight:bolder;">${req.body.suburb}</p>
                 </div>
                 <br/>
                 <br/>
                 <div>
                   <p>Post code</p>
-                  <p style="font-weight:bolder;">${body.postcode}</p>
+                  <p style="font-weight:bolder;">${req.body.postcode}</p>
                 </div>
                 <br/>
                 <br/>
                 <div>
                   <p>State</p>
-                  <p style="font-weight:bolder;">${body.state}</p>
+                  <p style="font-weight:bolder;">${req.body.state}</p>
                 </div>
                 <br/>
                 <br/>
                 <div>
                   <p>Additional Info</p>
-                  <p style="font-weight:bolder;">${body.additionInfo}</p>
+                  <p style="font-weight:bolder;">${req.body.additionInfo}</p>
                 </div>
                 <br/>
                 <br/>
               </div>
       </body>
       </html>`,
-    };
+      }
+    )
 
-      sgMail
-  .send(msg).then(() => {console.log("status Ok 200")}, error => {
-    console.error(error);
+  }catch(err){
+    console.log(err)
+    return res.status(err.statusCode || 500).json({error: "opps!! something went wrong"})
+  }
 
-    if (error.response) {
-      console.error(error.response.body)
-    }
-  });
-
-      res.status(200).json({ status: "ok" })
+  return res.status(200).json({error : ""})
 
 }
+
+export default sendEmail
+

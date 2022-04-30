@@ -23,7 +23,6 @@ export default function About () {
     return(
         <div className='w-85  mt-7 mx-auto overflow-hidden '>
             <Head>
-          <link rel="icon" href="" />
           <meta name="" content="" />
           <meta
             name="apple-mobile-web-app-status-bar-style"
@@ -63,12 +62,6 @@ export default function About () {
                     animate="visible"
                     variants={element}
                     className='md:text-60 text-36 4xl:text-[180px] font-[Righteous] text-center 2xl:text-74 3xl:text-[82px]'>About <span className='text-groshure-red'>Us</span></motion.div>
-                    <motion.p 
-                    initial="hidden"
-                    animate="visible"
-                    viewport={{ once: true }}
-                    variants={element}
-                    className='md:w-[500px] text-base mx-auto text-center  font-[circularstd] 2xl:w-[700px]  4xl:text-[52px] 4xl:w-[1500px] 2xl:text-20 3xl:text-24'>An enim nullam tempor sapien gravida donec enimipsum porta justo congue purus pretium ligula rjbrbnrbrjdw wd  d w d  </motion.p>
                     <motion.div 
                     initial="hidden"
                     animate="visible"

@@ -6,6 +6,7 @@ import MediaQuery from "react-responsive"
 import { motion } from "framer-motion"
 import MobileButton from "./mobilebutton"
 import { useState } from "react"
+import MessageAlert from "./messagealert"
 
 const element ={
     hidden: { opacity: 0 ,y: 100 },
@@ -17,25 +18,48 @@ export default function Footer() {
 
     const router = useRouter() 
     const [waitlist, joinWaitlist ]=useState("")
+    const [ msg , setMsg ] = useState("")
+    const [color, setColor] = useState("")
+
     
-    async function handleSubmit (e) {
-        e.preventDefault()
-        
+
+    const  handleSubmit = async e => {
+
+      e.preventDefault()
+
+      let res = await fetch("/api/waitlist", { 
+        method: "POST",
+        body: JSON.stringify({waitlist: waitlist }), 
+        headers: {
+          "Content-Type": "application/json",
+        }
+       })
+
+
+       const { error } = await res.json()
+
        
 
-        await fetch("/api/waitlist",{
-            method:"POST",
-            body:JSON.stringify({waitlist })
-        }).then(res => {
-            alert("thank you, we will get back to you soon")
-        }).catch(err => console.log(err))
+       if(error) {
+          setColor("red")
+          setMsg(error )
+       }else {
+         setColor("green")
+         setMsg("succesfull")
+       }
 
-        joinWaitlist("")
+       setTimeout(() => {
+          setMsg("")
+          setColor("")
+       },1000)
 
-    }
+      joinWaitlist("")
+  }
+
 
     return(
         <div className='min-h-[40vh]  font-[circularstd] relative z-0 4xl:min-h-1/3'>
+            <MessageAlert msg={msg} color={color} />
             <div className={router.asPath.slice(1,router.asPath.length) === "contact" ? "text-center md:p-[200px] p-[200px]  pt-[200px]  md:pb-[100px] bg-[#FFFAEB] md:px-0 px-[40px] 4xl:pt-[650px] 4xl:pb-[250px]" : "text-center md:p-[80px]  md:px-0 px-6 py-20 3xl:py-24  4xl:py-[250px] bg-[#FFFAEB]" }>
                 <motion.div 
                     initial={{ y: 100 }}
@@ -49,7 +73,7 @@ export default function Footer() {
                     initial={{ x: -100 }}
                     whileInView={{ x: 0 }}
                     className='mx-auto inline-block w-[100%] xl:w-[42%] 2xl:w-[40%] 3xl:w-[35%]'>
-                     <form method="POST" onSubmit={handleSubmit}>
+                     <form  onSubmit={handleSubmit}>
                         <div className='md:flex waitist_div border-[6px] wait_btn_div border-white w-100p sm:w-100p md:w-[50%] flex rounded-[50px] text-18 bg-white 2xl:text-24 3xl:text-[27px] 4xl:text-[50px] text-16 mx-auto xl:w-[90%] 4xl:rounded-[100px]'>
                                 <div className='md:w-[50%] lg:w-[55%]'>
                                     <input name="waitlist" type="email" placeholder="Enter email address" className='wait_input inline-block  md:py-2 lg:py-1 pl-7 py-1 rounded-l-[50px] 4xl:rounded-l-[100px] w-[100%] 3xl:py-3 xl:py-2 4xl:py-7' value={waitlist} onChange={(e) => joinWaitlist(e.target.value)} required />
@@ -73,8 +97,8 @@ export default function Footer() {
                     whileInView="visible"
                     className='w-90 mx-auto flex justify-between md:flex-row flex-col'>
                     <div className='flex items-center md:flex-row flex-col'>
-                        <div className='md:w-[100px] md:h-[40px]  4xl:w-[300px] 4xl:h-[120px] relative w-[100px] h-[40px] 4xl:mb-0 md:mb-0 mb-[20px] 2xl:w-[120px] 2xl:h-[60px] 3xl:w-[150px] 3xl:h-[70px]'>
-                            <Image className='absolute' src={logo}  alt="logo" layout="fill" quality={90} />
+                        <div className='md:w-[130px] md:h-[45px] lg:w-[110px] lg:h-[45px] xl:w-[90px] xl:h-[40px] 4xl:w-[300px] 4xl:h-[120px] relative w-[100px] h-[40px] 4xl:mb-0 md:mb-0 mb-[20px] 2xl:w-[120px] 2xl:h-[60px] 3xl:w-[150px] 3xl:h-[70px]'>
+                            <Image className='absolute' src={logo}  alt="logo" layout="fill" quality={90} objectFit='contain' />
                         </div>
                         <p className='text-[#616161] text-sm md:ml-3 md:text-left text-center 4xl:text-42 2xl:text-18 3xl:text-22'>© Copyright 2018 Pixsellz - Instant Groceries shopping to your doorstep.</p>
                     </div>

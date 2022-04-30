@@ -40,13 +40,12 @@ export default function Frequently(){
                 </motion.div>
                 <div className=' min-h-1/3  md:flex md:w-[70%]  xl:w-[70%] xl:flex justify-end xl:min-h-1/2'>
                     <div className=' xl:w-90 lg:min-h-1/5 xl:min-h-1/2'>
-                        <div className='relative h-[70px] xl:h-[100px] md:text-left xl:text-left text-center '>
+                        <div className='relative h-[70px] xl:h-[100px] md:text-left xl:text-left text-center 4xl:mb-48'>
                             <div className='absolute -top-8  w-120 h-120 -z-0 opacity-30 4xl:w-[200px] 4xl:h-[200px]'>
                                 <Image src={two} layout='fill' alt='two' quality={90}  />
                             </div>
                             <p className='md:text-36 xl:text-48 text-32 font-[Righteous] absolute 4xl:text-[120px] 2xl:text-[54px] 3xl:text-60'><span className='text-groshure-red z-10 4xl:text-[120px] 2xl:text-[54px] 3xl:text-60'>Frequently</span> Asked Questions</p>
                         </div>
-                        <p className='text-sm xs:mt-[100px] text-[#797B89] xl:w-[400px] my-5 4xl:my-[100px] text-center md:text-left xl:text-left mb-12 md:mt-10 xl:mt-0 font-[circularstd] 4xl:text-42 4xl:w-[900px] 2xl:text-18 3xl:text-22  3xl:my-10 3xl:w-[500px]'>This is a big one and consider it one of the most important thing for a designer to get right</p>
                         {  data ? data.map((q,index) => {
                             return (
                             <motion.div 

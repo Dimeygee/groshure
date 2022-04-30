@@ -113,7 +113,7 @@ export default function HeaderSlider({ headerSlider }) {
                           initial="hidden"
                           className={`relative h-100p ${imageIndex === 2 ? "w-[87%] xl:ml-20" : " w-100p" }`}
                         >
-                            <Image src={headerSlider[imageIndex]} alt={headerSlider[imageIndex]} layout="fill" quality={100} priority/>
+                            <Image src={headerSlider[imageIndex]} alt={headerSlider[imageIndex]} layout="fill" quality={100} priority  />
                         </motion.div>
                 </motion.div> 
             </AnimatePresence>

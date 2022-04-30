@@ -3,6 +3,7 @@ import { MenuContext } from "./context"
 import { useContext, useState  } from "react"
 import MediaQuery from "react-responsive"
 import Button from "../components/button"
+import MessageAlert from "./messagealert"
 
 export default function InvestorModal(){
 
@@ -15,6 +16,9 @@ export default function InvestorModal(){
 
     const { isInvestor,setInvestor} =  menucontext
 
+    const [ msg , setMsg ] = useState("")
+    const [color, setColor] = useState("")
+
     const handleClick = () => {
         checkOverflow()
         setInvestor(!isInvestor)
@@ -24,7 +28,7 @@ export default function InvestorModal(){
         
         let body = document.getElementsByTagName("body")[0]
 
-        if(!isInvestor ){
+        if(!isInvestor){
             body.style.overflow = 'hidden'
         }else{
             body.style.overflow = 'auto'
@@ -37,12 +41,33 @@ export default function InvestorModal(){
         
        
   
-        await fetch("/api/investors",{
+        const res = await fetch("/api/investors",{
             method:"POST",
-            body:JSON.stringify({storename, email,phoneNumber, additionInfo})
-        }).then(res => {
-            alert("thank you, we will get back to you soon")
-        }).catch(err => console.log(err))
+            body:JSON.stringify({
+                storename:storename, 
+                email:email,
+                phoneNumber:phoneNumber, 
+                additionInfo:additionInfo}),
+            headers: {
+                "Content-Type": "application/json",
+            }
+        })
+
+        const { error } = await res.json()
+
+        
+        if(error) {
+         setColor("red")
+         setMsg(error )
+         }else {
+         setColor("green")
+         setMsg("succesfull")
+         }
+ 
+         setTimeout(() => {
+             setMsg("")
+             setColor("")
+         },2000)
   
         setStoreName("")
         setEmail("")
@@ -53,6 +78,7 @@ export default function InvestorModal(){
 
     return(
         <div className='overlay fixed top-0 bottom-0 right-0 left-0  w-100p bg-[rgba(0,0,0,0.2)] z-50 pt-5 overflow-y-auto'>
+                <MessageAlert msg={msg} color={color} />
                 <AnimatePresence>
                 <motion.div 
                         initial={{ opacity: 0, y:10 }}
@@ -75,7 +101,7 @@ export default function InvestorModal(){
                                     </fieldset>
                                     <fieldset className='border-2 border-[#E8E9ED] px-4 py-1 text-sm 4xl:px-10 text-[#212B08] rounded-[12px] my-4 4xl:text-42 3xl:text-24 2xl:text-[19px] 4xl:py-5 4xl:rounded-[35px] 4xl:mb-10 '>
                                         <legend>Email</legend>
-                                        <input type='text' placeholder='Enter email' className=' p-0 inline-block w-100p text-base border-none outline-none  4xl:text-42 3xl:text-24' alue={email} onChange={(e)  => setEmail(e.target.value)} />
+                                        <input type='text' placeholder='Enter email' className=' p-0 inline-block w-100p text-base border-none outline-none  4xl:text-42 3xl:text-24' value={email} onChange={(e)  => setEmail(e.target.value)} />
                                     </fieldset>
                                     <fieldset className='border-2 border-[#E8E9ED] px-4 py-1 text-sm 4xl:px-10 text-[#212B08] rounded-[12px] my-4 4xl:text-42 3xl:text-24 2xl:text-[19px] 4xl:py-5 4xl:rounded-[35px] 4xl:mb-10 '>
                                         <legend>Phone number</legend>

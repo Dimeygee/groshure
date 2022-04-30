@@ -56,7 +56,7 @@ export default function Home() {
   return (
     <div className='home_container' >
       <Head>
-          <link rel="icon" href="" />
+      <link rel="icon" href="https://res.cloudinary.com/dimejiscloud/image/upload/v1651289225/two_xvbm6g.ico"  />  
           <meta name="" content="" />
           <title>groshure 🚀</title>
           <meta
@@ -86,7 +86,7 @@ export default function Home() {
           <meta name="twitter:card" content="" />
           <meta name="twitter:url" content="" />
         </Head>
-        <MobileHeader />
+          <MobileHeader />
       <header  className='hidden md:flex md:min-h-[30vh] xl:flex min-h-[30vh] mx-auto w-85  items-center xl:min-h-[50vh] xl:mt-0 mt-5 4xl:min-h-[50vh] 4xl:mt-[120px]' >
       <motion.div 
             initial="hidden"

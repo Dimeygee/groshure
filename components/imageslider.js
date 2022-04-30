@@ -104,7 +104,7 @@ export default function ImageSlider({imageSlider}){
                         }}}
                         className='sm:order-1 md:order-1 flex justify-center items-center md:mt-0 mt-5'>
                             <div className='relative border-white border-[10px] md:border-x-[20px] md:w-[260px] md:h-[240px] w-[250px] h-[250px] z-10 rounded-full 4xl:w-[670px] 4xl:h-[670px] 4xl:border-x-[45px] md:mb-20 2xl:w-[300px] 2xl:h-[300px] 3xl:w-[320px] 3xl:[320px]'>
-                                <Image src={ imageSlider[imageIndex].images[1] }  alt="image" layout="fill"  quality={90} />
+                                <Image src={ imageSlider[imageIndex].images[1] }  alt="image" layout="fill"  quality={90} objectFit="contain"  />
                             </div>
                         </motion.div>
                         <div className='userpix mt-10 xs:mt-0 md:mt-0 order-3 flex md:flex-col justify-evenly md:py-5 md:pb-20  md:order-3'>
@@ -114,7 +114,7 @@ export default function ImageSlider({imageSlider}){
                                    delay: 0.3
                                }}}
                               className='relative w-[80px] h-[80px] border-[3px] border-[#FD4C5C] rounded-full cursor-pointer 2xl:w-[90px] 2xl:h-[90px] 3xl:w-[100px] 3xl:h-[100px] 4xl:w-[210px] 4xl:h-[210px]' onClick={() => paginate(1)}>
-                                <Image  src={imageSlider[imageIndex].images[1]} alt='cofounder' layout='fill' quality={90} />
+                                <Image  src={imageSlider[imageIndex].images[1]} alt='cofounder' layout='fill' quality={90} objectFit="cover"  />
                               </motion.div>
                               <motion.div 
                               initial={{ opacity: 0, y: 100 }}
@@ -122,7 +122,7 @@ export default function ImageSlider({imageSlider}){
                                   delay: 0.3
                               }}}
                               className='relative w-[80px] h-[80px] rounded-full cursor-pointer 3xl:w-[100px] 3xl:h-[100px] 4xl:w-[210px] 4xl:h-[210px]' onClick={() => paginate(-1)}>
-                                <Image  src={imageSlider[imageIndex].images[0]} alt='cofounder' layout='fill' quality={90} />
+                                <Image  src={imageSlider[imageIndex].images[0]} alt='cofounder' layout='fill' quality={90}  objectFit="cover" />
                               </motion.div>
                             </div>
                     </div>

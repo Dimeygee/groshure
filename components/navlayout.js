@@ -73,11 +73,11 @@ export default function NavLayout () {
               animate={{ opacity: 1,x: 0,  transition: {
                 delay: 0.6
               } }}
-              className='w-[100px] h-[40px]  relative  xl:w-[105px] xl:h-[45px] 2xl:w-[120px] 2xl:h-[60px]  flex items-center 4xl:w-[300px] 4xl:h-[120px] 3xl:w-[150px] 3xl:h-[70px] md:w-[90px] md:h-[40px]'
+              className='w-[100px] h-[40px]  relative  xl:w-[90px] xl:h-[40px] 2xl:w-[120px] 2xl:h-[60px]  flex items-center 4xl:w-[300px] 4xl:h-[120px] 3xl:w-[150px] 3xl:h-[70px] md:w-[100px] md:h-[40px]'
             >
                <Link href="/">
                 <a>
-                  <Image src={logo} layout='fill' quality={90}  />
+                  <Image src={logo} layout='fill' quality={90} objectFit="contain"  />
                 </a>
               </Link>
             </motion.div>

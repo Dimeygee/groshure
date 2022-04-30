@@ -36,7 +36,7 @@ export default function SS_steps (){
             variants={element}
             className='h-[626px] relative overflow-y-hidden bg-[#A3D32A] rounded-[25px]'>
                 <div className='relative w-100p h-100p'>
-                    <Image src={green} alt='green' layout="fill" quality={90}   />
+                    <Image src={green} alt='green' layout="fill" quality={90} objectFit="cover"    />
                 </div>
                 <div className='absolute w-100p h-100p top-0 flex flex-col'>
                     <div className=' grow  px-7 pt-7'>
@@ -48,7 +48,7 @@ export default function SS_steps (){
                     </div>
                     <div className='grow-[7] shrink-0 flex justify-center'>
                         <div className='relative sm:w-[224px] xs:w-[214px] md:h-[408px]'> 
-                            <Image src={howlogin} alt="howlogin" layout="fill" quality={90} />
+                            <Image src={howlogin} alt="howlogin" layout="fill" quality={90} objectFit="cover"  />
                         </div>
                     </div>
                 </div>
@@ -59,7 +59,7 @@ export default function SS_steps (){
              variants={element}
              className='h-[626px] relative overflow-y-hidden bg-[#FD4C5C] rounded-[25px]'>
                 <div className='relative w-100p h-100p '>
-                    <Image src={red} alt='red' layout="fill" quality={90} />
+                    <Image src={red} alt='red' layout="fill" quality={90} objectFit="cover" />
                 </div>
                 <div className='absolute w-100p h-100p top-0 flex flex-col'>
                     <div className=' grow  px-7 pt-7'>
@@ -71,7 +71,7 @@ export default function SS_steps (){
                     </div>
                     <div className='grow-[7] shrink-0 flex justify-center'>
                         <div className='relative sm:w-[224px] xs:w-[214px] md:h-[408px]'>
-                            <Image src={fpframe} alt="fpframe" layout="fill" quality={90} />
+                            <Image src={fpframe} alt="fpframe" layout="fill" quality={90} objectFit="cover"  />
                         </div>
                     </div>
                 </div>
@@ -82,7 +82,7 @@ export default function SS_steps (){
              variants={element}
             className='h-[626px] relative overflow-y-hidden bg-[#000000] rounded-[25px]'>
                 <div className='relative w-100p h-100p '>
-                    <Image src={black} alt='black' layout="fill" quality={90}  />
+                    <Image src={black} alt='black' layout="fill" quality={90} objectFit="cover"  />
                 </div>
                 <div className='absolute w-100p h-100p top-0 flex flex-col'>
                     <div className=' grow  px-7 pt-7'>
@@ -94,7 +94,7 @@ export default function SS_steps (){
                     </div>
                     <div className='grow-[7] shrink-0 flex justify-center'>
                         <div className='relative xs:w-[214px] sm:w-[224px]  md:h-[408px]'>
-                            <Image src={howgroceries} alt="howgroceries" layout="fill" quality={90}  />
+                            <Image src={howgroceries} alt="howgroceries" layout="fill" quality={90} objectFit="cover"   />
                         </div>
                     </div>
                 </div>
@@ -105,7 +105,7 @@ export default function SS_steps (){
             variants={element}
             className='h-[626px] relative overflow-y-hidden bg-[#FFBB00] rounded-[25px]'>
                 <div className='relative w-100p h-100p'>
-                    <Image src={yellow} alt='yellow' layout="fill" quality={90}  />
+                    <Image src={yellow} alt='yellow' layout="fill" quality={90} objectFit="cover"  />
                 </div>
                 <div className='absolute w-100p h-100p top-0 flex flex-col'>
                     <div className=' grow  px-7 pt-7'>
@@ -117,7 +117,7 @@ export default function SS_steps (){
                     </div>
                     <div className='grow-[7] shrink-0 flex justify-center'>
                         <div className='relative sm:w-[224px] xs:w-[214px] md:h-[408px]'>
-                            <Image src={howcheckout} alt="howcheckout" layout="fill" quality={90}  />
+                            <Image src={howcheckout} alt="howcheckout" layout="fill" quality={90} objectFit="cover"   />
                         </div>
                     </div>
                 </div>
