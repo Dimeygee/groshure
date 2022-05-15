@@ -158,7 +158,7 @@ export  default function Steps(){
                                 <div className='xl:p-12 md:p-[1.5rem]'>
                                     <span className='rounded-full w-40 h-40  bg-white inline-block text-center font-black leading-[40px] 4xl:w-[80px] 4xl:h-[80px] 4xl:leading-[80px] 4xl:text-42 2xl:text-[30px] 2xl:w-[50px] 2xl:h-[50px] 2xl:leading-[50px] 3xl:text-36 3xl:w-[60px] 3xl:h-[60px] 3xl:leading-[60px]'>3</span>
                                     <h2 className='text-white font-black leading-[40px] text-32 mt-5 4xl:text-74 4xl:py-[15px] 4xl:my-10 2xl:text-[40px] 2xl:my-7 3xl:text-42 3xl:my-9 md:text-27'>Select groceries</h2>
-                                    <p className='text-base text-white leading-[25px] mt-3 4xl:text-42 2xl:text-[22px] 2xl:leading-7 4xl:leading-[57px] 3xl:text-25'>Select groceries available for selected store, you can add multiple groceris to your cart and easily checkout when ready.</p>
+                                    <p className='text-base text-white leading-[25px] mt-3 4xl:text-42 2xl:text-[22px] 2xl:leading-7 4xl:leading-[57px] 3xl:text-25'>Select groceries available for selected store, you can add multiple groceries to your cart and easily checkout when ready.</p>
                                 </div>
                              </div>
                             <div className='h-[55%] w-[100%] flex justify-center  4xl:h-[60%]'>

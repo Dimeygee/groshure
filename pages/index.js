@@ -165,7 +165,7 @@ export default function Home() {
                 </div>
              <div className="xl:pr-6 text-center xl:text-left   font-[circularstd]">
                 <h4 className='font-medium text-18 leading-5 xl:leading-5 mb-2 4xl:text-46 4xl:mb-10 2xl:text-24 2xl:leading-10 3xl:text-[27px]' >Well Curated items</h4>
-                <p className='text-sm text-[#718096] px-8 xl:px-0 4xl:text-42 4xl:pr-12 2xl:text-18 3xl:text-[24px]'>You definitely don't have to worry about not find a particular item in one store cos we have multiple stores and options for you.</p>
+                <p className='text-sm text-[#718096] px-8 xl:px-0 4xl:text-42 4xl:pr-12 2xl:text-18 3xl:text-[24px]'>You definitely don't have to worry about not finding a particular item in one store because we have multiple stores and options for you.</p>
              </div>
           </motion.div>
         </section>

@@ -23,6 +23,7 @@ export default function About () {
     return(
         <div className='w-85  mt-7 mx-auto overflow-hidden '>
             <Head>
+			<link rel="icon" href="https://res.cloudinary.com/dimejiscloud/image/upload/v1651289225/two_xvbm6g.ico"  /> 
           <meta name="" content="" />
           <meta
             name="apple-mobile-web-app-status-bar-style"
